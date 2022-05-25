@@ -13,13 +13,20 @@
 /*------------------------------------------------------------
 	Font
 ------------------------------------------------------------*/
-@mixin mincyo() {
-	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+@mixin styleNormal() {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 1.2;
 }
-@mixin mincho() {
-	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+@mixin styleDt() {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 1.2;
 }
-
 /*------------------------------------------------------------
 	Media
 ------------------------------------------------------------*/
@@ -63,13 +70,4 @@
 @mixin flex-jbetween {
 	display: flex;
 	justify-content: space-between;
-}
-@mixin ttl3 {
-	font-weight: 700;
-			font-size: 3rem;
-			color: white;
-			@include sp{
-				font-size: 2.5rem;
-				padding: 0 15px;
-			}
 }

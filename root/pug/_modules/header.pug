@@ -1,15 +1,17 @@
 header.c-header
-  .c-header_top 
-    p 
-      | Freeship nội thành cho đơn 
+  .c-header_top
+    p
+      | Freeship nội thành cho đơn
       span từ 250.000đ
-      |  – Tỉnh 
+      |  – Tỉnh
       span từ 400.000đ
-  .c-header_bottom 
+  .c-header_bottom
     .c-header_logo
       a(href="")
-        img(src=path+"assets/images/logo.png", alt="", sizes="", srcset="")  
-    ul.c-header_menu 
+       picture
+        source(srcset=path+"assets/images/logo.webp" type="image/webp")
+        img(src=path+"assets/images/logo.png" data-src=path+"assets/images/logo.png" alt='logo')
+    ul.c-header_menu
       li
         a(href="#") Best Seller
       li
@@ -17,9 +19,9 @@ header.c-header
       li
         a(href="#") Phụ Kiện
       li
-        a(href="#") Dịch Vụ     
+        a(href="#") Dịch Vụ
       li
-        a(href="#") Thông Tin     
+        a(href="#") Thông Tin
 
     ul.c-header_icon
           li.cart

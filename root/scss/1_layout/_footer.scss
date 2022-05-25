@@ -3,62 +3,69 @@
 ------------------------------------------------------------*/
 .c-footer {
 	width: 100%;
-	padding: 50px 0 150px;
-	border-top: 4px solid $color-main;
+	padding: 8.5rem 0 10.6rem;
 	text-align: center;
-	color: black;
+	background-color: #2B2929;
+	color: #ffffffff;
+	@include styleNormal;
 	@include sp{
 		padding: 50px 0;
 	}
-	.l-container{
+	&_top{
 		@include flex-jbetween;
-		flex-wrap: wrap;
-		text-align: left;
-		font-weight: 700;
-		a{
-			color: black;
-			text-decoration: none;
-			font-size: 1.8rem;
-			&:hover{
-				color: $color-main;
-			}
-		}
-		dl{
-			width: 25%;
-			padding: 0 25px;
-			@include sp{
-				width: 100%;
-				margin: 10px 0;
-				padding: 0;
-			}
+		padding: 0 -20px;
+		> dl{
+			@include flex;
+			flex-direction: column;
+			text-align: left;
+			width: calc(25% - 40px);
+			margin: 0 20px;
 		}
 		dt{
-			font-size: 2.5rem;
-			margin-bottom: 1.5rem;
-			color: $color-main;
-			@include sp{
-				margin-bottom: 0.5rem;
-			}
+			text-align: left;
+			@include styleDt;
+			margin-bottom: 2rem;
 		}
 		dd{
-			font-weight: 400;
-			font-size: 1.8rem;
+			@include styleNormal;
+			margin: 5px 0;
 		}
+		a{
+			text-decoration: none;
+			color: white;
+			transition: 0.3 ease-out;
+			&:hover{
+				font-weight: bold;
+			}
+		}
+	}
+	&_copy{
+		text-align: left;
+		margin: 2.5rem 0 4rem;
+		@include styleNormal;
+	}
+	&_bottom{
+		@include flex-jbetween;
+		margin-top: 10.62rem;
+		align-items: center;
+	}
+	&_logo{
+		max-width: 161px;
 	}
 	&_social{
 		@include flex;
-		width: 100% !important;
-		padding: 15px 0 !important;
-		@include sp{
-			margin-top: 0;
-			padding: 3px 0 0 !important;
-		}
+		align-items: center;
 		dd{
-			padding-right: 18px;
-			img{
-				width: 28px;
-				height: 28px;
-			}
+			margin:17px 5px;
+		}
+		img{
+			max-width: 39px;
+			height: auto;
+		}
+	}
+	&_certificates{
+		dd{
+			margin: 17px 10px;
 		}
 	}
 }
