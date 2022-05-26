@@ -4,10 +4,10 @@
 		width: 100%;
 		left: 0;
 		right: 0;
-		padding: 3rem 0;
-		transform: translateX(-100%);
-		// visibility: hidden;
-		transition: 2s ease-in;
+		padding: 2.5rem 0 3rem;
+		// transform: translateX(-100%);
+		visibility: hidden;
+		transition: 0.2s ease-out;
 		&inner{
 			.l-container{
 				@include flex-jbetween;
@@ -32,15 +32,14 @@
 				}
 			}
 		}
+	}
 	&_dropdown{
 		&:hover{
 			.c-menu_sub{
-				// visibility: visible;
-				transform: translateX(0) !important;
+				visibility: visible;
+				// transform: translateX(0);
 			}
 		}
-	}
-
 	}
 
 }
