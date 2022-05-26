@@ -43,6 +43,7 @@
 	}
 	&_icon{
 		@include flex;
+		align-items: center;
 		li{
 			padding: 10px;
 			svg{
