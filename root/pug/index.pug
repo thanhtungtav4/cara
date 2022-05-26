@@ -7,28 +7,40 @@ block vars
   -pageID       = 'top'
   -path         = ''
 block before_page
-  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css")
+    link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
 block after_page
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js")
-  script.
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      navText: [
-        "<i class='fa fa-caret-left'></i>",
-        "<i class='fa fa-caret-right'></i>"
-      ],
-      dot: false,
-      autoplay: true,
-      items: 1,
-      autoplayHoverPause: true,
-    })
-
+    script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script. 
+      $(document).ready(function(){
+        $('.c-carousel_inner ').slick({
+        slidesToShow: 1,
+        infinite: true,
+        dots: true,
+        speed: 300,
+        arrows: false,
+        lazyLoad: 'progressive',
+        });
+      });
 block container
-  .owl-carousel.owl-theme
-    .item
-      img(src=path+"assets/images/slider.jpg", alt="", sizes="", srcset="")
-    .item
-      img(src=path+"assets/images/slider.jpg", alt="", sizes="", srcset="")
-  
+  .c-carousel
+    .c-carousel_inner 
+      .c-carousel_item 
+        a(href="#")
+          picture
+            source(srcset=path+"assets/images/carousel.webp" type="image/webp")
+            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")
+      .c-carousel_item 
+        a(href="#")
+          picture
+            source(srcset=path+"assets/images/carousel.webp" type="image/webp")
+            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")       
+      .c-carousel_item 
+        a(href="#")
+          picture
+            source(srcset=path+"assets/images/carousel.webp" type="image/webp")
+            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")
+      .c-carousel_item 
+        a(href="#")
+          picture
+            source(srcset=path+"assets/images/carousel.webp" type="image/webp")
+            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")          
