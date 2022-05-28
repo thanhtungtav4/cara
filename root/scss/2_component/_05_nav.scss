@@ -6,13 +6,30 @@
 		left: 0;
 		right: 0;
 		padding: 2.5rem 0 3rem;
-		// transform: translateX(-100%);
+		transform: translateX(-100%);
 		visibility: hidden;
-		transition: 0.2s ease-out;
 		&inner{
 			.l-container{
 				@include flex-jbetween;
 				padding: 0;
+				&.col-3{
+					dl{
+						width: calc(33.3% - 20px);
+    					margin: 0 10px;
+					}
+				}
+				&.col-4{
+					dl{
+						width: calc(25% - 20px);
+    					margin: 0 10px;
+					}
+				}
+				&.col-5{
+					dl{
+						width: calc(20% - 20px);
+    					margin: 0 10px;
+					}
+				}
 			}
 			background-color: #F5F5F5;
 			padding: 2rem 0 5rem;
@@ -38,7 +55,8 @@
 		&:hover{
 			.c-menu_sub{
 				visibility: visible;
-				// transform: translateX(0);
+				transform: translateX(0);
+				z-index: 1;
 			}
 		}
 	}

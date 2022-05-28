@@ -3,7 +3,7 @@
 ------------------------------------------------------------*/
 .c-header {
 	width: 100%;
-	transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in;
 	padding: 17px 0 0;
 	position: relative;
 	@include sp{
@@ -44,8 +44,13 @@
 	&_icon{
 		@include flex;
 		align-items: center;
-		li{
+		> li{
 			padding: 10px;
+			position: relative;
+			a{
+				text-decoration: none;
+				color: black;
+			}
 			svg{
 				fill: #2B2929;
 			}
@@ -53,7 +58,125 @@
 				svg{
 					fill: #EB6A6A;
 				}
+				&::before{
+					content: '';
+					width: 0;
+					height: 0;
+					border-left: 15px solid transparent;
+					border-right: 15px solid transparent;
+					border-bottom: 15px solid #FFFFFF;
+					position: absolute;
+					bottom: 5px;
+				}
 			}
+			&.cart{
+				position: relative;
+				span{
+					position: absolute;
+					top: 5px;
+					right: 7px;
+					width: 18px;
+					height: 18px;
+					background-color: #EB6A6A;
+					border-radius: 50%;
+					text-align: center;
+					color: white;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 18px;
+				}
+			}
+			.c-menu_sub{
+				width: 350px;
+				background: #FFFFFF;
+				border-radius: 10px;
+				left: auto;
+				&inner{
+					padding: 0 1rem;
+					background-color: #FFFFFF;	
+					.cart{
+						width: 350px;
+						&_inner{
+							li {
+								@include flex-jbetween;
+								margin-bottom: 1rem;
+							}
+						}
+						&_img{
+							width: 80px;
+							height: auto;
+						}
+						&_content{
+							width: calc(100% - 90px);
+							margin-left: 10px;
+							&_top{
+								@include flex-jbetween;
+								> a{
+									width: calc(100% - 100px);
+									text-decoration: none;
+									strong{
+										color: #000000;
+									}
+									p{
+										color: #ABABAB;
+									}
+								}
+							}
+							&_bottom {
+								@include flex-jbetween;
+							}
+						}
+					}
+				}
+			}
+			&.search{
+				.c-menu_sub{
+					width: 300px;
+					form{
+						position: relative;
+						input{
+							width: 100%;
+							border-top: 0;
+							border-left: 0;
+							border-right: 0;
+							height: 2rem;
+							position: relative;
+							&::placeholder{
+								font-style: italic;
+								font-weight: 300;
+								font-size: 14px;
+							}
+						}
+						i{
+							position: absolute;
+							right: 0;
+							top: 4px;
+						}
+					}
+				}
+			}
+			&.user{
+				.c-menu_sub{
+					width: 170px;
+					a{
+						font-size: 1.4rem;
+						line-height: 1.5;
+						padding: 5px 0;
+						display: block;
+					}
+				}
+			}
+			&.lang{
+				.c-menu_sub{
+					width: 170px;
+					a{
+						font-size: 1.4rem;
+						line-height: 1.5;
+						padding: 5px 0;
+						display: block;
+					}
+				}
+			}			
 		}
 	}
 	&_bottom{
