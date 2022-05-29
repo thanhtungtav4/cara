@@ -50,6 +50,9 @@
 			a{
 				text-decoration: none;
 				color: black;
+				&:hover{
+					color: #EB6A6A;
+				}
 			}
 			svg{
 				fill: #2B2929;
@@ -169,11 +172,45 @@
 			&.lang{
 				.c-menu_sub{
 					width: 170px;
-					a{
-						font-size: 1.4rem;
-						line-height: 1.5;
-						padding: 5px 0;
-						display: block;
+					ol{
+						li{
+							a{
+								font-size: 1.4rem;
+								line-height: 1.5;
+								padding: 5px 0;
+								display: block;
+								position: relative;
+								padding-left: 25px;
+								@include flex;
+								align-items: center;
+								transition: 0.3 ease-in;
+								&::before{
+									content: '';
+									position: absolute;
+									background-image: url(../../assets/images/ellipse.svg);
+									width: 18px;
+									height: 18px;
+									background-size: 18px;
+									background-position: center;
+									background-repeat: no-repeat;
+									left: 0;
+								}
+							}
+							&:hover{
+								a{
+									&::before{
+										background-image: url(../../assets/images/radiobutton.svg);
+									}
+								}
+							}
+							&.is_active{
+								a{
+									&::before{
+										background-image: url(../../assets/images/radiobutton.svg);
+									}
+								}
+							}
+						}
 					}
 				}
 			}			
