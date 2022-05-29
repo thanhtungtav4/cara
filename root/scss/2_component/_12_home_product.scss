@@ -81,6 +81,18 @@
                 }
             }
         }
+        &02{
+           @include flex-jbetween;
+           flex-wrap: wrap;
+           ul{
+               li{
+                   width: calc(25% - 20px);
+                   @include sp{
+                    width: calc(50% - 16px);
+                   }
+               }
+           }
+        }
     }
     &__img {
         position: relative;

@@ -59,6 +59,14 @@ block after_page
         $('.m-product__next').click(function(e){
           $('.m-product__slick').slick('slickNext');
         } ); 
+        $('.m-product__slick02').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+        });
       });
 block container
   .c-carousel
@@ -93,3 +101,4 @@ block container
     include _modules/home-product    
     include _modules/home-product  
     include _modules/home-product          
+    include _modules/home-product02  
