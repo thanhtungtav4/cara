@@ -14,7 +14,11 @@
 		padding-bottom: 17px;
 		p{
 			font-size: 2rem;
+			@include sp{
+				font-size: 1.5rem;
+			}
 			line-height: 1.2;
+			font-weight: 300;
 			span{
 				color: #EB6A6A;
 				font-weight: bold;
@@ -25,9 +29,15 @@
 		@include flex-jbetween;
 		padding: 10px 0;
 		align-items: center;
+		@include sp{
+			padding: 0;
+		}
 	}
 	&_menu{
 		@include flex;
+		@include sp{
+			display: none;
+		}
 		li{
 			padding: 10px 23px;
 			a{
@@ -44,9 +54,16 @@
 	&_icon{
 		@include flex;
 		align-items: center;
+		@include sp{
+			width: 100%;
+			justify-content: space-around;
+		}
 		> li{
 			padding: 10px;
 			position: relative;
+			@include sp{
+				position: initial;
+			}
 			a{
 				text-decoration: none;
 				color: black;
@@ -57,40 +74,50 @@
 			svg{
 				fill: #2B2929;
 			}
+			.icon_inner{
+				position: relative;
+			}
 			&:hover{
 				svg{
 					fill: #EB6A6A;
 				}
-				&::before{
-					content: '';
-					width: 0;
-					height: 0;
-					border-left: 15px solid transparent;
-					border-right: 15px solid transparent;
-					border-bottom: 15px solid #FFFFFF;
-					position: absolute;
-					bottom: 5px;
+				.icon_inner{
+					&::before{
+						content: '';
+						width: 0;
+						height: 0;
+						border-left: 15px solid transparent;
+						border-right: 15px solid transparent;
+						border-bottom: 15px solid #FFFFFF;
+						position: absolute;
+						bottom: -4px;
+						left: 5px;
+					}
 				}
 			}
 			&.cart{
-				position: relative;
-				span{
-					position: absolute;
-					top: 5px;
-					right: 7px;
-					width: 18px;
-					height: 18px;
-					background-color: #EB6A6A;
-					border-radius: 50%;
-					text-align: center;
-					color: white;
-					font-size: 12px;
-					font-weight: 400;
-					line-height: 18px;
+				.icon_inner{
+					span{
+						position: absolute;
+						top: -3px;
+						right: -3px;
+						width: 18px;
+						height: 18px;
+						background-color: #EB6A6A;
+						border-radius: 50%;
+						text-align: center;
+						color: white;
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 18px;
+					}
 				}
 			}
 			.c-menu_sub{
 				width: 350px;
+				@include sp{
+					width: 100vw;
+				}
 				background: #FFFFFF;
 				border-radius: 10px;
 				left: auto;
@@ -224,6 +251,9 @@
 		img{
 			width: 79px;
 			height: 57px;
+		}
+		@include sp{
+			display: none;
 		}
 	}
 }
