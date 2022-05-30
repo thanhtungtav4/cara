@@ -264,6 +264,27 @@
 		}
 	}
 	&.js-active{
+		.c-menu_sub{
+			position: inherit;
+			padding: 0;
+			display: none;
+			&inner{
+				padding: 0;
+				.l-container {
+					flex-direction: column;
+					dl{
+						width: calc(100% - 20px);
+					}
+				}
+			}
+		}
+		.c-menu_dropdown{
+			&:hover{
+				.c-menu_sub{
+					display: flex;
+				}
+			}
+		}
 		.c-header_menu{
 			position: fixed;
 			top: 0;
@@ -278,6 +299,10 @@
 			img{
 				width: 141px;
 			}
+		}
+		.c-menu__close{
+			text-align: right;
+			padding-bottom: 0;
 		}
 	}
 }
