@@ -10,17 +10,17 @@ block before_page
     link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
 block after_page
     script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
-    script. 
+    script.
       $(document).ready(function(){
-        $('.c-carousel_inner ').slick({
+        $('.c-carousel_inner ').not('.slick-initialized').slick({
         slidesToShow: 1,
         infinite: true,
         dots: true,
         speed: 300,
         arrows: false,
-        lazyLoad: 'progressive', 
+        lazyLoad: 'progressive',
         });
-        $('.slick-sure').slick({
+        $('.slick-sure').not('.slick-initialized').slick({
           infinite: true,
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -44,7 +44,7 @@ block after_page
             }
           ]
         });
-        $('.m-product__slick').slick({
+        $('.m-product__slick').not('.slick-initialized').slick({
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -52,14 +52,14 @@ block after_page
           arrows: true,
           lazyLoad: 'progressive',
         });
-        $('.m-product__prev').click(function(e){ 
+        $('.m-product__prev').click(function(e){
           $('.m-product__slick').slick('slickPrev');
         } );
-        
+
         $('.m-product__next').click(function(e){
           $('.m-product__slick').slick('slickNext');
-        } ); 
-        $('.m-product__slick02').slick({
+        } );
+        $('.m-product__slick02').not('.slick-initialized').slick({
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -70,35 +70,35 @@ block after_page
       });
 block container
   .c-carousel
-    .c-carousel_inner 
-      .c-carousel_item 
+    .c-carousel_inner
+      .c-carousel_item
         a(href="#")
           picture
             source(srcset=path+"assets/images/carousel.avif" type="image/avif")
             source(srcset=path+"assets/images/carousel.webp" type="image/webp")
             img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")
-      .c-carousel_item 
-        a(href="#")
-          picture
-            source(srcset=path+"assets/images/carousel.avif" type="image/avif")
-            source(srcset=path+"assets/images/carousel.webp" type="image/webp")
-            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")       
-      .c-carousel_item 
+      .c-carousel_item
         a(href="#")
           picture
             source(srcset=path+"assets/images/carousel.avif" type="image/avif")
             source(srcset=path+"assets/images/carousel.webp" type="image/webp")
             img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")
-      .c-carousel_item 
+      .c-carousel_item
         a(href="#")
           picture
             source(srcset=path+"assets/images/carousel.avif" type="image/avif")
             source(srcset=path+"assets/images/carousel.webp" type="image/webp")
-            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600") 
-  .l-container 
-    include _modules/sure              
-    include _modules/home-product   
-    include _modules/home-product    
-    include _modules/home-product  
-    include _modules/home-product          
-    include _modules/home-product02  
+            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")
+      .c-carousel_item
+        a(href="#")
+          picture
+            source(srcset=path+"assets/images/carousel.avif" type="image/avif")
+            source(srcset=path+"assets/images/carousel.webp" type="image/webp")
+            img.lazyload(src=path+"assets/images/carousel.jpg" data-src=path+"assets/images/carousel.jpg" alt='Logo' loading="lazy" width="1512" height="600")
+  .l-container
+    include _modules/sure
+    include _modules/home-product
+    include _modules/home-product
+    include _modules/home-product
+    include _modules/home-product
+    include _modules/home-product02

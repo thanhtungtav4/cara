@@ -123,7 +123,7 @@
 				left: auto;
 				&inner{
 					padding: 0 1rem;
-					background-color: #FFFFFF;	
+					background-color: #FFFFFF;
 					.cart{
 						width: 350px;
 						&_inner{
@@ -197,8 +197,15 @@
 				}
 			}
 			&.lang{
+				.icon_inner{
+					&::before{
+						bottom: -15px;
+						left: -1px;
+					}
+				}
 				.c-menu_sub{
 					width: 170px;
+					margin-top: 10px;
 					ol{
 						li{
 							a{
@@ -240,7 +247,7 @@
 						}
 					}
 				}
-			}			
+			}
 		}
 	}
 	&_bottom{
@@ -254,6 +261,23 @@
 		}
 		@include sp{
 			display: none;
+		}
+	}
+	&.js-active{
+		.c-header_menu{
+			position: fixed;
+			top: 0;
+			background-color: #F5F5F5;
+			flex-direction: column;
+			width: 100vw;
+			min-height: 100vh;
+			display: flex;
+			z-index: 3;
+		}
+		.c-menu__logo{
+			img{
+				width: 141px;
+			}
 		}
 	}
 }
