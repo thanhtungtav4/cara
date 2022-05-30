@@ -7,7 +7,9 @@ block vars
   -pageID       = 'top'
   -path         = ''
 block before_page
-    link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+    link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 block after_page
     script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
     script.
