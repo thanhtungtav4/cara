@@ -21,14 +21,17 @@
         transform: rotate(-45deg);
         top: 10px;
         left: 12px
-       } 
+       }
    }
 .only-sp{
     display: none;
     @include sp{
         display: block;
     }
-}   
+}
 .w-100{
     width: 100% !important;
+}
+.strong{
+    font-weight: 700;
 }
