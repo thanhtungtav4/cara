@@ -282,6 +282,8 @@
 			&:hover{
 				.c-menu_sub{
 					display: flex;
+					visibility: visible;
+    			transform: translateX(0);
 				}
 			}
 		}
@@ -291,9 +293,14 @@
 			background-color: #F5F5F5;
 			flex-direction: column;
 			width: 100vw;
-			min-height: 100vh;
+			height: 100vh;
 			display: flex;
 			z-index: 3;
+			overflow-y: auto;
+			flex-wrap: nowrap;
+			li{
+				width: 100%;
+			}
 		}
 		.c-menu__logo{
 			img{

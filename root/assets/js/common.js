@@ -13,6 +13,7 @@ if ('loading' in HTMLImageElement.prototype) {
 function toggleMenu(){
     let menu = document.getElementsByClassName("c-header");
     menu[0].classList.toggle("js-active");
+    document.body.classList.toggle("js-active");
     let html_appentlose = '<li class="c-menu c-menu__close" onclick="toggleMenu()" ><svg'+
     '  width="24"'+
     '  height="24"'+
