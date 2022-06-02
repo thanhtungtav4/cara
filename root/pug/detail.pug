@@ -7,65 +7,55 @@ block vars
   -pageID       = 'top'
   -path         = ''
 block before_page
-  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css")
+    link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 block after_page
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js")
-
+    script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script.
+      $(document).ready(function(){
+        $('.slick-sure').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+          responsive: [
+             {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        $('.m-product__prev').click(function(e){
+          $('.m-product__slick').slick('slickPrev');
+        } );
+        $('.m-product__next').click(function(e){
+          $('.m-product__slick').slick('slickNext');
+        } );
+        $('.m-product__slick02').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+        });
+      });
 block container
   .l-container
-    .c-detail
-      ul.c-breadcrumb
-        li
-          a(href="#")
-            img(src=path+"assets/images/home.svg")
-        li
-          a(href="#") BLOG
-        li
-          a(href="#") Kiến Thức
+    include _modules/breadcrumbs
+    include _modules/sure
 
-      h1 3 yếu tố cần được chú trọng để tạo nên sự thành công của dự án quảng cáo
-      .c-detail_img
-        img(src="https://picsum.photos/1900/578")
-      dl.c-footer_social
-        dd
-          a(href="#")
-            img.lazy-loaded-image.lazy(data-src=path+"assets/images/facebook.png")
-        dd
-          a(href="#")
-            img.lazy-loaded-image.lazy(data-src=path+"assets/images/twitter.png")
-        dd
-          a(href="#")
-            img.lazy-loaded-image.lazy(data-src=path+"assets/images/youtube.png")
-      h2 KHÁI QUÁT VỀ BRAND EQUITY VÀ CÁCH ÁP DỤNG TRONG MỘT CHIẾN DỊCH BRAND MARKETING
-      p Brand Equity hay tài sản thương hiệu là một thuật ngữ dùng để chỉ giá trị của một thương hiệu đã đạt được và đã mang lại, và có thể được xem là: Chất lượng sản phẩm/ dịch vụ, trải nghiệm thương hiệu, hoặc cũng có thể là kết quả xây dựng định hướng hoặc tầm nhìn của thương hiệu,… và tất cả những giá trị đó đều được xem là tài sản của thương hiệu.
-        br
-        | Hiểu rõ được thuật ngữ Brand Equity sẽ giúp các bạn Junior và Newbie rất nhiều trong việc phân tích các chiến dịch Brand Marketing của đối thủ và xây dựng định hướng để phát triển thương hiệu, Brand Equity được phân tích dựa vào 4 yếu tố sau:
-        br
-        | 👉 Mức độ nhận diện
-        br
-        | 👉 Sự Cảm nhận
-        br
-        | 👉 Lòng trung thành
-        br
-        | 👉 Lợi thế cạnh tranh
-        br
-        | Để hiểu rõ hơn về thuật ngữ Brand Marketing này bạn có thể tham khảo Blog Future Brand của team chúng mình qua bài viết Brand Equity là gì nhé:
-        br
-        | Link bài viết: https://futurebrandvietnam.com/brand-equity-la-gi/
-        br
-        | ----
-        br
-        | Theo dõi ngay Fanpage #FutureBrandViệtNam nếu bạn muốn cập nhật thêm về kiến thức Branding và Brand Marketing
-
-    .c-ad
-      .c-ad_inner
-        .c-ad_img
-           img.lazy-loaded-image.lazy(data-src=path+"assets/images/img02.png")
-        .c-ad_content
-          h3 Quản lý dự án quảng cáo
-          .c-ad_area
-            .c-ad_btn
-              a.shop(href="#") Đăng ký
-            .c-ad_btn
-              a.play(href="#") Trailer
-
+    include _modules/home-product02
