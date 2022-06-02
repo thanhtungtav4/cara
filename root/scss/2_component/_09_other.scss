@@ -23,6 +23,42 @@
         left: 12px
        }
    }
+.gg-calendar-dates {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	transform: scale(var(--ggs,1));
+	width: 18px;
+	height: 18px;
+	border: 2px solid;
+	border-radius: 3px;
+	&::after {
+		content: "";
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		border-radius: 3px;
+		height: 2px;
+		left: 2px;
+		width: 10px;
+		top: -4px;
+		box-shadow: 0 6px 0 0;
+	}
+	&::before {
+		content: "";
+		display: block;
+		box-sizing: border-box;
+		position: absolute;
+		border-radius: 3px;
+		height: 2px;
+		left: 2px;
+		background: currentColor;
+		width: 2px;
+		box-shadow: 4px 0 0,8px 0 0,0 4px 0, 4px 4px 0,8px 4px 0;
+		top: 6px;
+	}
+}
+
 .only-sp{
     display: none;
     @include sp{
@@ -34,4 +70,30 @@
 }
 .strong{
     font-weight: 700;
+}
+.m-discount{
+    @include flex;
+    flex-direction: column;
+    text-align: right;
+    span{
+        color: #EB6A6A;
+        font-weight: 400;
+        font-size: 16px;
+        &:nth-child(2){
+            color: black;
+            font-size: 1.4rem;
+            text-decoration: line-through;
+        }
+    }
+
+}
+.m-date{
+    @include flex;
+    color: #ABABAB;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.2;
+    i{
+        margin-right: 7px;
+    }
 }

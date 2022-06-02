@@ -69,6 +69,36 @@ block after_page
           arrows: false,
           lazyLoad: 'progressive',
         });
+        $('.m-new__prev').click(function(e){
+          $('.m-new__slick').slick('slickPrev');
+        } );
+        $('.m-new__next').click(function(e){
+          $('.m-new__slick').slick('slickNext');
+        } );
+        $('.m-new__slick').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+          responsive: [
+             {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
       });
 block container
   .c-carousel
@@ -92,3 +122,7 @@ block container
     include _modules/home-product
     include _modules/home-product
     include _modules/home-product02
+    include _modules/home-product02
+    include _modules/experience
+    include _modules/shop-service
+    include _modules/slide-new
