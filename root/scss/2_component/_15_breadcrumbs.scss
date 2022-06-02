@@ -1,0 +1,23 @@
+.c-breadcrumb{
+    @include flex;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    li{
+        color: #2B2929;
+        a{
+            color: #ABABAB;
+            text-decoration: none;
+            &::after{
+                content: '';
+                padding: 0 15px 0 7px;
+                margin-left: 15px;
+                background-image: url(../../assets/images/arrow_right.svg);
+                background-repeat: no-repeat;
+                position: relative;
+                bottom: -4px;
+            }
+        }
+    }
+}

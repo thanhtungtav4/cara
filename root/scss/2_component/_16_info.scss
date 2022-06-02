@@ -1,0 +1,22 @@
+.c-info {
+    @include flex-jbetween;
+    align-items: stretch;
+    .list, .video{
+        width: calc(50% - 20px);
+        margin: 10px;
+        h4{
+            @include ttl4;
+            margin-bottom: 1rem;
+        }
+        ul{
+            @include flex-jbetween;
+            flex-direction: column;
+            li{
+                padding-bottom: 13px;
+            }
+        }
+        @include sp{
+            width: 100%;
+        }
+    }
+}

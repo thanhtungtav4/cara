@@ -14,6 +14,26 @@ block after_page
     script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
     script.
       $(document).ready(function(){
+        function openTab(evt, TabName) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("c-tab_item");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+
+          // Show the current tab, and add an "active" class to the button that opened the tab
+          document.getElementById(TabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
         $('.slick-sure').not('.slick-initialized').slick({
           infinite: true,
           slidesToShow: 4,
@@ -57,5 +77,6 @@ block container
   .l-container
     include _modules/breadcrumbs
     include _modules/sure
-
+    include _modules/tab
     include _modules/home-product02
+    include _modules/info

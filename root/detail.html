@@ -339,6 +339,28 @@
               </li>
             </ul>
           </div>
+          <div class="c-tab"> 
+            <div class="c-tab_top"> 
+              <button class="button tablinks" onclick="openTab(event, 'cart')">GIỎ HÀNG</button>
+              <button class="button tablinks" onclick="openTab(event, 'parameter')">THÔNG SỐ</button>
+              <button class="button tablinks" onclick="openTab(event, 'insurane')">BẢO HÀNH</button>
+              <button class="button tablinks" onclick="openTab(event, 'review')">REVIEW (24)</button>
+            </div>
+            <div class="c-tab_content"> 
+              <div class="c-tab_item" id="cart"> 
+                <h3>GIỎ HÀNG</h3>
+              </div>
+              <div class="c-tab_item" id="parameter"> 
+                <h3>GIỎ HÀNG     </h3>
+              </div>
+              <div class="c-tab_item" id="insurane"> 
+                <h3>GIỎ HÀNG</h3>
+              </div>
+              <div class="c-tab_item" id="review"> 
+                <h3>GIỎ HÀNG              </h3>
+              </div>
+            </div>
+          </div>
           <div class="m-product">
             <div class="m-product_top">
               <h4>KÍNH Y TẾ CHUYÊN DỤNG</h4>
@@ -506,6 +528,35 @@
               </ul>
             </div>
           </div>
+          <div class="c-info"> 
+            <div class="list">
+              <h4>KÍNH Y TẾ CHUYÊN DỤNG</h4>
+              <ul> 
+                <li> <a href="#">
+                    <picture>
+                      <source srcset="assets/images/info.avif" type="image/avif">
+                      <source srcset="assets/images/info.webp" type="image/webp"><img class="lazyload" src="assets/images/info.jpg" data-src="assets/images/info.jpg" alt="info" loading="lazy" width="667" height="132">
+                    </picture></a></li>
+                <li> <a href="#">
+                    <picture>
+                      <source srcset="assets/images/info02.avif" type="image/avif">
+                      <source srcset="assets/images/info02.webp" type="image/webp"><img class="lazyload" src="assets/images/info02.jpg" data-src="assets/images/info02.jpg" alt="info" loading="lazy" width="667" height="132">
+                    </picture></a></li>
+                <li> <a href="#">
+                    <picture>
+                      <source srcset="assets/images/info03.avif" type="image/avif">
+                      <source srcset="assets/images/info03.webp" type="image/webp">
+                    </picture><img class="lazyload" src="assets/images/info03.jpg" data-src="assets/images/info03.jpg" alt="info" loading="lazy" width="667" height="132"></a></li>
+              </ul>
+            </div>
+            <div class="video">
+              <h4>KÍNH Y TẾ CHUYÊN DỤNG</h4><a href="#">
+                <picture>
+                  <source srcset="assets/images/youtubeItem.avif" type="image/avif">
+                  <source srcset="assets/images/youtubeItem.webp" type="image/webp"><img class="lazyload" src="assets/images/youtubeItem.jpg" data-src="assets/images/youtubeItem.jpg" alt="info" loading="lazy" width="664" height="421">
+                </picture></a>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="c-footer">
@@ -627,6 +678,26 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
       $(document).ready(function(){
+        function openTab(evt, TabName) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+      
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("c-tab_item");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+      
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+      
+          // Show the current tab, and add an "active" class to the button that opened the tab
+          document.getElementById(TabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
         $('.slick-sure').not('.slick-initialized').slick({
           infinite: true,
           slidesToShow: 4,
