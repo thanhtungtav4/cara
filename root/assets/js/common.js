@@ -10,6 +10,13 @@ if ('loading' in HTMLImageElement.prototype) {
     'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
   document.body.appendChild(script);
 };
+
+window.onscroll = function(e) {
+  if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+      console.log(121);
+  }
+};
+
 function toggleMenu(){
     let menu = document.getElementsByClassName("c-header");
     menu[0].classList.toggle("js-active");
