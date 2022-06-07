@@ -1,15 +1,93 @@
 .c-tab 
     .c-tab_top 
-        button.button.tablinks(onclick="openTab(event, 'cart')") GIỎ HÀNG
+        button.button.tablinks.active(onclick="openTab(event, 'description')") Mô tả
         button.button.tablinks(onclick="openTab(event, 'parameter')") THÔNG SỐ
         button.button.tablinks(onclick="openTab(event, 'insurane')") BẢO HÀNH
         button.button.tablinks(onclick="openTab(event, 'review')") REVIEW (24)
     .c-tab_content  
-        .c-tab_item#cart  
+        .c-tab_item#description(style="display: block;")  
+            h2 Lavier Choco – Bí mật của đôi mắt nâu trầm ấm
+            p 𝑳𝑨𝑽𝑰𝑬𝑹 𝑪𝑯𝑶𝑪𝑶 (𝑺𝟎𝟕𝑪), “món trang sức” dành cho đôi mắt với màu nâu gỗ trầm ấm và vô cùng tự nhiên, trong trẻo. Sự hòa quyện nhẹ nhàng với để không che lấp đi đôi mắt vốn đã tuyệt vời của nàng.
+            img.lazyload(src=path+"assets/images/image_2.jpg" data-src=path+"assets/images/image_2.jpg" alt='Logo' loading="lazy" width="1200" height="800")
+            p Đặc biệt, Lens Choco là dòng kính cao cấp với chất liệu mềm và ẩm gấp hai lần. Do đó Lavier Choco là loại kính áp tròng nữ dành cho  nàng có cơ địa mắt khô và yếu. Nàng cũng có thể đeo lens để đi học, đi làm với tần suất sử dụng lên đến 14h/ngày.
+            p Hiểu được nhu cầu sử dụng thường xuyên của tín đồ đeo lens, Caras đã có cải tiến dòng lens Caras với thời gian sử dụng được cải tiến từ 12h nâng lên 14h/ ngày. Bạn có thể yên tâm gạt đi nỗi lo khô cộm mắt sau khi sử dụng cả ngày dài rồi nhé!
+        .c-tab_item#parameter(style="display: none;")
+            table
+                tbody
+                    tr
+                    td
+                        span(style='font-weight: 400;') D&atilde;y &dstrok;&#x1ED9;
+                    td
+                        span(style='font-weight: 400;') 0 &ndash; 10 &dstrok;&#x1ED9;
+                    tr
+                    td
+                        span(style='font-weight: 400;') GDia
+                    td
+                        span(style='font-weight: 400;') 13.6 mm
+                    tr
+                    td
+                        span(style='font-weight: 400;') &Dstrok;&#x1ED9; cong c&#x1EE7;a lens (B.C)
+                    td 8.7
+                    tr
+                    td
+                        span(style='font-weight: 400;') H&agrave;m l&#x1B0;&#x1EE3;ng n&#x1B0;&#x1EDB;c
+                    td 33%
+                    tr
+                    td
+                        span(style='font-weight: 400;') H&#x1EA1;n s&#x1EED; d&#x1EE5;ng
+                    td
+                        span(style='font-weight: 400;') 3 Th&aacute;ng
+                    tr
+                    td
+                        span(style='font-weight: 400;') Size&nbsp;
+                    td
+                        span(style='font-weight: 400;') Medium
+                    tr
+                    td
+                        span(style='font-weight: 400;') Style
+                    td
+                        span(style='font-weight: 400;') Nh&#x1EB9; nh&agrave;ng, t&#x1EF1; nhi&ecirc;n
+                    tr
+                    td
+                        span(style='font-weight: 400;') Recommend t&#x1EEB; Caras Lens
+                    td
+                        span(style='font-weight: 400;') Tone m&#x1EAF;t &dstrok;en&nbsp;
+                    tr
+                    td
+                        span(style='font-weight: 400;') C&ocirc;ng ngh&#x1EC7; c&#x1EE7;a Lens
+                    td
+                        ul
+                        li(style='font-weight: 400;')
+                            span(style='font-weight: 400;')
+                            | RealcoT: T&abreve;ng c&#x1B0;&#x1EDD;ng l&#x1EDB;p m&agrave;ng b&oacute;ng gi&uacute;p t&#x1EA1;o chi&#x1EC1;u s&acirc;u, &dstrok;&ocirc;i m&#x1EAF;t tr&#x1EDF; n&ecirc;n long lanh h&#x1A1;n.
+                        li(style='font-weight: 400;')
+                            span(style='font-weight: 400;')
+                            | Anti UV: Ng&abreve;n ch&#x1EB7;n tia c&#x1EF1;c t&iacute;m t&#x1EEB; &aacute;nh n&#x1EAF;ng M&#x1EB7;t Tr&#x1EDD;i c&utilde;ng nh&#x1B0; t&#x1EEB; m&aacute;y t&iacute;nh, thi&#x1EBF;t b&#x1ECB; &dstrok;i&#x1EC7;n t&#x1EED;.
+                        li(style='font-weight: 400;')
+                            span(style='font-weight: 400;')
+                            | Nano Oxy-Hydrogen: T&abreve;ng c&#x1B0;&#x1EDD;ng &dstrok;&#x1ED9; &#x1EA9;m v&agrave; th&#x1EA9;m th&#x1EA5;u kh&iacute;, mang l&#x1EA1;i s&#x1EF1; kh&#x1ECF;e kho&#x1EAF;n v&agrave; tho&#x1EA3;i m&aacute;i khi d&ugrave;ng.
+                        li(style='font-weight: 400;')
+                            span(style='font-weight: 400;')
+                            | Nano AntiX: C&aacute;c ph&acirc;n t&#x1EED; nano kh&aacute;ng khu&#x1EA9;n, l&#x1EDB;p b&#x1EA3;o v&#x1EC7; m&#x1EAF;t tr&#x1B0;&#x1EDB;c m&ocirc;i tr&#x1B0;&#x1EDD;ng b&#x1EE5;i b&#x1EA9;n.
+                        li(style='font-weight: 400;')
+                            span(style='font-weight: 400;')
+                            | Etafilcon A: Gi&uacute;p t&abreve;ng c&#x1B0;&#x1EDD;ng th&#x1ECB; l&#x1EF1;c &dstrok;&#x1EC3; mang l&#x1EA1;i &aacute;nh nh&igrave;n trong s&aacute;ng v&agrave; tinh kh&ocirc;i .
+                    tr
+                    td
+                        span(style='font-weight: 400;') Packed
+                    td
+                        span(style='font-weight: 400;') 1 C&#x1EB7;p lens (2 lens tr&aacute;i ph&#x1EA3;i)
+                    tr
+                    td
+                        span(style='font-weight: 400;') Th&#x1B0;&#x1A1;ng hi&#x1EC7;u&nbsp;
+                    td
+                        span(style='font-weight: 400;') Caras Lens
+                    tr
+                    td(colspan='2')
+                        img.alignnone.size-full.wp-image-8086.lazyloaded(alt='' width='260' height='90' data-src='https://caraslens.com/wp-content/uploads/2020/04/ft2.png' src='https://caraslens.com/wp-content/uploads/2020/04/ft2.png' loading='lazy')
+                        img.alignnone.size-full.wp-image-5917.lazyloaded(alt='' width='97' height='103' data-src='https://caraslens.com/wp-content/uploads/2020/03/logo.png' src='https://caraslens.com/wp-content/uploads/2020/03/logo.png' loading='lazy')
+ 
+        .c-tab_item#insurane(style="display: none;")  
             h3 GIỎ HÀNG
-        .c-tab_item#parameter 
-            h3 GIỎ HÀNG     
-        .c-tab_item#insurane  
-            h3 GIỎ HÀNG
-        .c-tab_item#review 
+        .c-tab_item#review(style="display: none;") 
             h3 GIỎ HÀNG              
