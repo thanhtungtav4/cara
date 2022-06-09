@@ -77,3 +77,22 @@ jQuery.event.special.mousewheel = {
   }
 };
 
+let positionBf = $(window).scrollTop();
+$(window).scroll(function(){
+  let positionAf = $(this).scrollTop();
+  if( positionAf <= 150){
+      console.log(1);
+      //$('.m-headerSp').removeClass('is-scroll');
+      // if( positionAf <= elementTop){
+      //  // $('.m-headerSp').removeClass('js-sticky');
+      // }
+  }
+  else{
+    if(positionBf >= 150){
+      // $('.m-headerSp').addClass('js-sticky');
+      // $('.m-headerSp').addClass('is-scroll');
+      console.log(2);
+    }
+  }
+  positionBf = positionAf;
+});
