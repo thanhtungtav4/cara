@@ -13,7 +13,7 @@
             border-radius: 0;
             border: 1px solid #2B2929;
             &.active, &:hover{
-                background: #2B2929; 
+                background: #2B2929;
                 color: white;
             }
             @include sp{
@@ -40,6 +40,28 @@
             width: 800px;
             margin: 2rem auto;
             text-align: center;
+        }
+    }
+    &Cart{
+        .c-tab_top{
+            button{
+                width: 33.3333333%;
+            }
+        }
+        &_inner{
+            @include flex-jbetween;
+            ul{
+                width: 70%;
+                li{
+                    width: 100%;
+                }
+            }
+            .info{
+                width: 30%;
+                h4{
+                   @include ttl4;
+                }
+            }
         }
     }
 }

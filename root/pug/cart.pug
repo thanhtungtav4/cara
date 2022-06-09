@@ -1,0 +1,74 @@
+extends _layout/default
+
+block vars
+  -title        = 'Top'
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = ''
+block before_page
+    link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+    noscript
+      link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+block after_page
+    script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script.
+      $(document).ready(function(){
+        $('.slick-sure').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+          responsive: [
+             {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        $('.m-product__prev').click(function(e){
+          $('.m-product__slick').slick('slickPrev');
+        } );
+        $('.m-product__next').click(function(e){
+          $('.m-product__slick').slick('slickNext');
+        } );
+        $('.m-product__slick02').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+        });
+      });
+      function openTab(evt, TabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("c-tab_item");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(TabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+block container
+  .l-container
+    include _modules/breadcrumbs
+    include _modules/sure
+    include _modules/tabCart
+    include _modules/home-product02

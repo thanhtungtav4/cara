@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="preload" as="style" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    </noscript>
   </head>
   <body>
     <div class="container">
@@ -295,69 +298,227 @@
         </div>
       </header>
       <main class="l-main">
-        <div class="c-learn ebook">
-          <div class="l-container">
-            <h1 class="ttl">Ebook by Tomorrow Marketers</h1>
-            <p class="text">
-              Bạn muốn tìm hiểu về Brand , Digital hay Trade Marketing ? <br>Hãy khám phá thế giới marketing trong ebook của Tomorrow Marketers</p>
-            <div class="c-learn_inner">
-              <ul>
-                <li class="c-learn_item">
-                  <div class="c-learn_img"><img class="lazy" data-src="assets/images/img03.jpg" alt=""></div>
-                  <div class="c-learn_content">
-                    <h4>5 Steps to Create an Outstanding Marketing Plan [Free Templates]</h4><a class="c-learn_category" href="#">Marketing Strage</a>
-                    <p class="c-learn_icon"><img class="lazy" data-src="assets/images/pin_fill.svg" alt=""></p>
-                    <p>Hé lộ bức tranh tổng quan về ngành Marketing ,giúp bạn đưa ra lựa chọn về con đường nghề nghiệp , kế hoạch học tập Marketing cho riêng mình .</p>
-                    <div class="c-btn"><a class="c-btn_ebook c-btn_dowload" href>Xem thêm bài viết</a></div>
+        <div class="l-container">
+          <ul class="c-breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li> <a href="#">Sản phẩm   </a></li>
+            <li> <a href="#">Kính áp tròng nữ        </a></li>
+            <li>Russian Smoky Brown    </li>
+          </ul>
+          <div class="c-sure"> 
+            <ul class="slick-sure">
+              <li> 
+                <p>Freeship nội thành cho đơn <strong>từ 250.000đ</strong>– Tỉnh <strong>từ 400.000đ</strong></p>
+                <picture>
+                  <source srcset="assets/images/delivery_icon.svg" type="image/svg"><img class="lazyload" src="assets/images/delivery_icon.png" data-src="assets/images/delivery_icon.png" alt="Freeship nội thành cho đơn từ 250.000đ – Tỉnh từ 400.000đ" loading="lazy" width="161" height="134">
+                </picture>
+              </li>
+              <li> 
+                <p>Khám thị lực và tư vấn <strong>miễn phí </strong>(đặt lịch trước)</p>
+                <picture>
+                  <source srcset="assets/images/eye_icon.svg" type="image/svg"><img class="lazyload" src="assets/images/eye_icon.jpg" data-src="assets/images/eye_icon.jpg" alt="Khám thị lực và tư vấn miễn phí (đặt lịch trước)" loading="lazy" width="161" height="134">
+                </picture>
+              </li>
+              <li> 
+                <p>Thanh toán <strong>quẹt thẻ tận nơi </strong>(áp dụng nội thành HN, TP.HCM)</p>
+                <picture>
+                  <source srcset="assets/images/credit_icon.svg" type="image/svg"><img class="lazyload" src="assets/images/credit_icon.jpg" data-src="assets/images/credit_icon.jpg" alt="Thanh toán quẹt thẻ tận nơi (áp dụng nội thành HN, TP.HCM)" loading="lazy" width="161" height="134">
+                </picture>
+              </li>
+              <li> 
+                <p>Chế độ bảo <strong>hành vàng cho </strong>trường hợp rách, xước, đồ cộm  </p>
+                <picture>
+                  <source srcset="assets/images/thumb_icon.svg" type="image/svg"><img class="lazyload" src="assets/images/thumb_icon.jpg" data-src="assets/images/thumb_icon.jpg" alt="Chế độ bảo hành vàng cho trường hợp rách, xước, đồ cộm" loading="lazy" width="161" height="134">
+                </picture>
+              </li>
+            </ul>
+          </div>
+          <div class="c-tab c-tabCart">
+            <div class="c-tab_top">
+              <button class="button tablinks active" onclick="openTab(event, 'cart')">GIỎ HÀNG</button>
+              <button class="button tablinks" onclick="openTab(event, 'parameter')">Giao Hàng</button>
+              <button class="button tablinks" onclick="openTab(event, 'insurane')">Hoàn Tất</button>
+            </div>
+            <div class="c-tab_content">
+              <div class="c-tab_item" id="cart" style="display: block;">
+                <div class="c-tabCart_inner">
+                  <ul>
+                    <li></li>
+                  </ul>
+                  <div class="info">
+                    <div class="info_item">
+                      <h4>TỔNG TIỀN</h4>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-product">
+            <div class="m-product_top">
+              <h4>KÍNH Y TẾ CHUYÊN DỤNG</h4>
+              <div class="m-product__nav">
+                <button class="m-product__prev">
+                  <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="23" cy="23" r="22" stroke-width="2"></circle>
+                    <path d="M28.835 14.8699L27.065 13.0999L17.165 22.9999L27.065 32.8999L28.835 31.1299L20.705 22.9999L28.835 14.8699H28.835Z"></path>
+                  </svg>
+                </button>
+                <button class="m-product__next">
+                  <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="23" cy="23" r="22" stroke-width="2"></circle>
+                    <path d="M18.165 31.1301L19.935 32.9001L29.835 23.0001L19.935 13.1001L18.165 14.8701L26.295 23.0001L18.165 31.1301V31.1301Z" fill="#2B2929"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="m-product__inner w-100">
+              <ul class="m-product__slick m-product__slick02 w-100">
+                <li>
+                  <ul>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3 class="strong">XANIA BROWN</h3></a>
+                          <p>400.000VND</p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3><strong>XANIA BROWN</strong></h3></a>
+                          <p class="m-discount"><span>400.000VND</span><span>1350.5000VND</span></p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3><strong>XANIA BROWN</strong></h3></a>
+                          <p class="m-discount"><span>400.000VND</span><span>1350.5000VND</span></p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3><strong>XANIA BROWN</strong></h3></a>
+                          <p class="m-discount"><span>400.000VND</span><span>1350.5000VND</span></p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </li>
-                <li class="c-learn_item">
-                  <div class="c-learn_img"><img class="lazy" data-src="assets/images/img03.jpg" alt=""></div>
-                  <div class="c-learn_content">
-                    <h4>5 Steps to Create an Outstanding Marketing Plan [Free Templates]</h4><a class="c-learn_category" href="#">Marketing Strage</a>
-                    <p class="c-learn_icon"><img class="lazy" data-src="assets/images/pin_fill.svg" alt=""></p>
-                    <p>Hé lộ bức tranh tổng quan về ngành Marketing ,giúp bạn đưa ra lựa chọn về con đường nghề nghiệp , kế hoạch học tập Marketing cho riêng mình .</p>
-                    <div class="c-btn"><a class="c-btn_ebook c-btn_dowload" href>Xem thêm bài viết</a></div>
-                  </div>
-                </li>
-                <li class="c-learn_item">
-                  <div class="c-learn_img"><img class="lazy" data-src="assets/images/img03.jpg" alt=""></div>
-                  <div class="c-learn_content">
-                    <h4>5 Steps to Create an Outstanding Marketing Plan [Free Templates]</h4><a class="c-learn_category" href="#">Marketing Strage</a>
-                    <p class="c-learn_icon"><img class="lazy" data-src="assets/images/pin_fill.svg" alt=""></p>
-                    <p>Hé lộ bức tranh tổng quan về ngành Marketing ,giúp bạn đưa ra lựa chọn về con đường nghề nghiệp , kế hoạch học tập Marketing cho riêng mình .</p>
-                    <div class="c-btn"><a class="c-btn_ebook c-btn_dowload" href>Xem thêm bài viết</a></div>
-                  </div>
-                </li>
-                <li class="c-learn_item">
-                  <div class="c-learn_img"><img class="lazy" data-src="assets/images/img03.jpg" alt=""></div>
-                  <div class="c-learn_content">
-                    <h4>5 Steps to Create an Outstanding Marketing Plan [Free Templates]</h4><a class="c-learn_category" href="#">Marketing Strage</a>
-                    <p class="c-learn_icon"><img class="lazy" data-src="assets/images/pin_fill.svg" alt=""></p>
-                    <p>Hé lộ bức tranh tổng quan về ngành Marketing ,giúp bạn đưa ra lựa chọn về con đường nghề nghiệp , kế hoạch học tập Marketing cho riêng mình .</p>
-                    <div class="c-btn"><a class="c-btn_ebook c-btn_dowload" href>Xem thêm bài viết</a></div>
-                  </div>
-                </li>
-                <li class="c-learn_item">
-                  <div class="c-learn_img"><img class="lazy" data-src="assets/images/img03.jpg" alt=""></div>
-                  <div class="c-learn_content">
-                    <h4>5 Steps to Create an Outstanding Marketing Plan [Free Templates]</h4><a class="c-learn_category" href="#">Marketing Strage</a>
-                    <p class="c-learn_icon"><img class="lazy" data-src="assets/images/pin_fill.svg" alt=""></p>
-                    <p>Hé lộ bức tranh tổng quan về ngành Marketing ,giúp bạn đưa ra lựa chọn về con đường nghề nghiệp , kế hoạch học tập Marketing cho riêng mình .</p>
-                    <div class="c-btn"><a class="c-btn_ebook c-btn_dowload" href>Xem thêm bài viết</a></div>
-                  </div>
-                </li>
-                <li class="c-learn_item">
-                  <div class="c-learn_img"><img class="lazy" data-src="assets/images/img03.jpg" alt=""></div>
-                  <div class="c-learn_content">
-                    <h4>5 Steps to Create an Outstanding Marketing Plan [Free Templates]</h4><a class="c-learn_category" href="#">Marketing Strage</a>
-                    <p class="c-learn_icon"><img class="lazy" data-src="assets/images/pin_fill.svg" alt=""></p>
-                    <p>Hé lộ bức tranh tổng quan về ngành Marketing ,giúp bạn đưa ra lựa chọn về con đường nghề nghiệp , kế hoạch học tập Marketing cho riêng mình .</p>
-                    <div class="c-btn"><a class="c-btn_ebook c-btn_dowload" href>Xem thêm bài viết</a></div>
-                  </div>
+                <li>
+                  <ul>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3 class="strong">XANIA BROWN</h3></a>
+                          <p>400.000VND</p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3><strong>XANIA BROWN</strong></h3></a>
+                          <p class="m-discount"><span>400.000VND</span><span>1350.5000VND</span></p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3 class="strong">XANIA BROWN</h3></a>
+                          <p>400.000VND</p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href>
+                        <div class="m-product__img"></div>
+                        <picture>
+                          <source srcset="assets/images/product_item.avif" type="image/avif">
+                          <source srcset="assets/images/product_item.webp" type="image/webp"><img class="lazyload" src="assets/images/product_item.jpg" data-src="assets/images/product_item.jpg" alt="Logo" loading="lazy" width="323" height="323">
+                        </picture></a>
+                      <div class="m-product__content">
+                        <div class="m-product__content-top"><a href>
+                            <h3><strong>XANIA BROWN</strong></h3></a>
+                          <p class="m-discount"><span>400.000VND</span><span>1350.5000VND</span></p>
+                        </div>
+                        <div class="m-product__content-bottom">
+                          <p>8h/ngày | 3 tháng</p>
+                          <div class="btn_area"><a class="btn_area__add" href="#"><img class="lazyload" src="assets/images/note_add.svg" data-src="assets/images/note_add.svg" alt="Logo" loading="lazy" width="16" height="20"></a><a class="btn_area__del" href="#"><img class="lazyload" src="assets/images/addcart.svg" data-src="assets/images/addcart.svg" alt="Logo" loading="lazy" width="22" height="22"></a></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </li>
               </ul>
-              <div class="c-btn"><a class="c-btn_ebook" href>Xem thêm bài viết</a></div>
             </div>
           </div>
         </div>
@@ -478,6 +639,61 @@
     </div>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/common.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.slick-sure').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+          responsive: [
+             {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+        $('.m-product__prev').click(function(e){
+          $('.m-product__slick').slick('slickPrev');
+        } );
+        $('.m-product__next').click(function(e){
+          $('.m-product__slick').slick('slickNext');
+        } );
+        $('.m-product__slick02').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+        });
+      });
+      function openTab(evt, TabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("c-tab_item");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(TabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
   </body>
 </html>
