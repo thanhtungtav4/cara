@@ -3,7 +3,7 @@
 ------------------------------------------------------------*/
 .c-header {
 	width: 100%;
-	transition: 0.3s ease-in;
+	transition: 0.5s ease-in;
 	padding: 17px 0 0;
 	position: relative;
 	@include sp{
@@ -309,6 +309,14 @@
 		.c-menu__close{
 			text-align: right;
 			padding-bottom: 0;
+		}
+	}
+	&.js_scroll{
+		position: fixed;
+    z-index: 99;
+    top: -60px;
+		@include sp{
+			top: -70px;
 		}
 	}
 }

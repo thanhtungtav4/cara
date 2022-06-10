@@ -81,17 +81,11 @@ let positionBf = $(window).scrollTop();
 $(window).scroll(function(){
   let positionAf = $(this).scrollTop();
   if( positionAf <= 150){
-      console.log(1);
-      //$('.m-headerSp').removeClass('is-scroll');
-      // if( positionAf <= elementTop){
-      //  // $('.m-headerSp').removeClass('js-sticky');
-      // }
+      document.getElementsByClassName("c-header")[0].classList.remove("js_scroll");
   }
   else{
-    if(positionBf >= 150){
-      // $('.m-headerSp').addClass('js-sticky');
-      // $('.m-headerSp').addClass('is-scroll');
-      console.log(2);
+    if(positionBf >= 85){
+      document.getElementsByClassName("c-header")[0].classList.add("js_scroll");
     }
   }
   positionBf = positionAf;
