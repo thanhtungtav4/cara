@@ -50,16 +50,15 @@
         }
         &_inner{
             @include flex-jbetween;
+            margin-top: 4rem;
+            border-top: 1px solid #EBEBEB;
             ul{
-                width: 70%;
-                li{
+                width: 75%;
+                @include sp{
                     width: 100%;
                 }
-            }
-            .info{
-                width: 30%;
-                h4{
-                   @include ttl4;
+                li{
+                    width: 100%;
                 }
             }
         }
