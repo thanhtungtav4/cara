@@ -1,0 +1,128 @@
+.number-input {
+	display: inline-flex;
+	box-sizing: border-box;
+    font-weight: 300;
+    input[type="number"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+    input[type=number] {
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+	* {
+		box-sizing: border-box;
+	}
+	button {
+		outline: none;
+		-webkit-appearance: none;
+		background-color: #2B2929;
+		border: none;
+		align-items: center;
+		justify-content: center;
+		width: 3rem;
+		height: 3.5rem;
+		cursor: pointer;
+		margin: 0;
+		position: relative;
+        &:after {
+			content: '';
+            background-image: url(../../assets/images/arrow_left_white.svg);
+            position: absolute;
+            background-size: 9px 17px;
+            background-size: 9px 17px;
+            width: 9px;
+            height: 17px;
+            top: 7px;
+            left: 11px;
+            transform: rotate(179deg);
+		}
+        &.plus{
+            &:after {
+                transform: rotate(0);
+            }
+        }
+	}
+	input[type=number] {
+		font-family: sans-serif;
+		max-width: 5rem;
+		padding: .5rem;
+		border-width: 0 1px;
+		font-size: 2rem;
+		height: 3.5rem;
+		font-weight: 300;
+		text-align: center;
+        border: 1px solid #2B2929;
+	}
+}
+.m-control{
+    @include flex-center;
+    justify-content: flex-start;
+}
+.m-cart{
+    @include sp{
+        width: 100%;
+    }
+    li{
+        @include flex-jbetween;
+        padding: 2rem 0;
+        border-top: 1px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+        .img{
+            width: 160px;
+            height: 160px;
+            position: relative;
+            overflow: hidden;
+            @include sp{
+                width: 85px;
+                height: 85px;
+            }
+            img{
+                position: absolute;
+                left: 0;
+                right: 0;
+                object-fit: cover;
+            }
+        }
+        .info{
+            @include flex-jbetween;
+            padding-left: 50px;
+            width: calc(100% - 160px); 
+            @include sp{
+                padding-left: 0;
+                width: calc(100% - 105px);
+                flex-wrap: wrap;
+            }
+            .price{
+                align-items: center;
+                @include flex-center;
+                font-size: 2.4rem;
+                font-weight: 400;
+            }
+            .content {
+                @include flex;
+                justify-content: space-between;
+                text-align: left;
+                padding-right: 20px;
+                @include sp{
+                    padding: 0 0 20px 0;
+                }   
+                a{
+                    font-weight: bold;
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                    color: #000000;
+                }
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

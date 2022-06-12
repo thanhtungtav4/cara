@@ -35,7 +35,7 @@
             margin-top: 0;
             margin-bottom: 1rem;
         }
-        img{
+        > img{
             max-width: 100%;
             width: 800px;
             margin: 2rem auto;
@@ -51,13 +51,17 @@
         &_inner{
             @include flex-jbetween;
             margin-top: 4rem;
-            border-top: 1px solid #EBEBEB;
-            ul{
-                width: 75%;
+            @include sp{
+                flex-wrap: wrap;
+            }
+            .m-cart{
+                width: calc(75% - 50px);
+                margin-right: 50px;
                 @include sp{
                     width: 100%;
+                    margin-right: 0;
                 }
-                li{
+                > li{
                     width: 100%;
                 }
             }

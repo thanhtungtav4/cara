@@ -82,6 +82,16 @@
             font-weight: 600;
             font-size: 1.8rem;
             color: #2B2929;
+            &_item{
+                @include flex-jbetween;
+                align-items: center;
+                svg{
+                    width: 40px;
+                }
+                p{
+                    width: calc(100% - 80px);
+                }
+            }
         }
     }
 }

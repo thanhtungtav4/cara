@@ -13,6 +13,21 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+.pgb-5{
+	padding-bottom: 8rem;
+}
+.only-pc{
+	display: block;
+	@include sp{
+		display: none !important;
+	}
+}
+.only-sp{
+	display: none;
+	@include sp{
+		display: block;
+	}
+}
 @media (min-width: 576px) {
 	.l-container {
 			width: 540px;
