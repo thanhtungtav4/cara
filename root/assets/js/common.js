@@ -10,13 +10,11 @@ if ('loading' in HTMLImageElement.prototype) {
     'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
   document.body.appendChild(script);
 };
-
 window.onscroll = function(e) {
   if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
       console.log(121);
   }
 };
-
 function toggleMenu(){
     let menu = document.getElementsByClassName("c-header");
     menu[0].classList.toggle("js-active");
@@ -48,6 +46,8 @@ function toggleMenu(){
     '              </li>';
     let is_true =  document.getElementsByClassName("c-menu__logo")[0];
     if(is_true == undefined){
+
+
       let select_appent = document.getElementsByClassName("c-header_menu")[0];
       select_appent.insertAdjacentHTML("afterbegin", html_appent);
       select_appent.insertAdjacentHTML("beforeend", html_appentLang);
@@ -55,7 +55,6 @@ function toggleMenu(){
     }
 
 }
-
 jQuery.event.special.touchstart = {
   setup: function( _, ns, handle ) {
       this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
