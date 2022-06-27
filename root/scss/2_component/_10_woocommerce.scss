@@ -1,0 +1,15 @@
+.widget_shopping_cart_content{
+    .woocommerce-mini-cart__total{
+        margin-top: 2rem;
+    }
+    .woocommerce-mini-cart__buttons{
+        &.buttons{
+            @include flex-jbetween;
+            margin-top: 1rem;
+            .button {
+                padding: 10px 15px;
+            }
+        }
+        
+    }
+}
