@@ -1,0 +1,14 @@
+.woocommerce-mini-cart__buttons{
+  @include flex-jbetween;
+  margin-top: 1rem;
+  .wc-forward{
+    padding: 8px 18px;
+    border-radius: 3px;
+    font-weight: 700;
+  }
+}
+.widget_shopping_cart_content{
+  .woocommerce-mini-cart__total{
+    text-align: end;
+  }
+}
