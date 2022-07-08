@@ -1,0 +1,43 @@
+.contact{
+    width: 100%;
+    padding: 5rem 0;
+    background-color: #F1F0F0;
+    .l-container{
+        @include flex-jbetween;
+        width: 100%;
+        flex-wrap: wrap;
+        .map{
+            width: calc(60% - 10px);
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            @include sp{
+                width: 100%;
+            }
+        }
+        .form{
+            width: calc(40% - 10px);
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            @include sp{
+                width: 100%;
+                order: 2;
+                margin-top: 2rem;
+            }
+            h4{
+                font-size: 3.2rem;
+                text-align: center;
+                font-weight: 300;
+                margin-bottom: 2rem;
+            }
+            input, textarea{
+                width: -webkit-fill-available;
+                margin-bottom: 2rem;
+                padding: 15px 20px;
+            }
+        }
+       
+    }
+   
+}
