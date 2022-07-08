@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .widget_shopping_cart_content{
     .woocommerce-mini-cart__total{
         margin-top: 2rem;
@@ -12,4 +13,19 @@
         }
         
     }
+=======
+.woocommerce-mini-cart__buttons{
+  @include flex-jbetween;
+  margin-top: 1rem;
+  .wc-forward{
+    padding: 8px 18px;
+    border-radius: 3px;
+    font-weight: 700;
+  }
+}
+.widget_shopping_cart_content{
+  .woocommerce-mini-cart__total{
+    text-align: end;
+  }
+>>>>>>> 44dff52f1b7eb63a984fbaf6a7b51ffef5299d68
 }
