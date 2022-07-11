@@ -1,0 +1,18 @@
+extends _layout/default
+
+block vars
+  -title        = 'Top'
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = ''
+  -ispage       = 'category product'
+
+
+block container
+  .l-container
+    include _modules/breadcrumbs
+  .l-container
+    include _modules/block_news
+
+

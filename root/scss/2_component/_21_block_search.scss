@@ -9,9 +9,16 @@
   flex-direction: column;
   justify-content: end;
   padding-bottom: 5rem;
+  @include sp{
+    background-size: cover;
+    height: 400px;
+  }
   .ttl{
     font-size: 4rem;
     margin-bottom: 3.4rem;
+    @include sp{
+      font-size: 3rem;
+    }
   }
   &_inner{
     background: rgba(43, 41, 41, 0.7);
@@ -21,11 +28,18 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 50px;
+    @include sp{
+      padding: 0 10px;
+      height: 150px;
+    }
     form{
       @include flex-jbetween;
     }
     input{
       height: 45px;
+      @include sp{
+        height: 35px;
+      }
     }
     input[type=submit]{
       width: 150px;
@@ -41,23 +55,41 @@
       &:hover{
         cursor: pointer;
       }
+      @include sp{
+        width: 100px;
+        height: 39px;
+        font-size: 1.3rem;
+        margin-left: 5px;
+      }
     }
     input[type=text]{
       width: calc(100% - 180px);
       padding: 0 15px;
+      @include sp{
+        width: calc(100% - 100px);
+        padding: 0 5px;
+        border-radius: 5px;
+      }
     }
     padding: 0 5rem;
     ul{
       @include flex;
       margin-top: 1.7rem;
+      @include sp{
+        margin-top: 1rem;
+      }
       li{
         margin-right: 15px;
-        font-size: 12px;
+        font-size: 1.2rem;
         color: white;
         &.key{
           background-color: #EB5757;
           padding: 0 7px;
           padding-top: 2px;
+        }
+        @include sp{
+          line-height: 1.5;
+          font-size: 1rem;
         }
         a{
           &:hover{
@@ -73,8 +105,12 @@
   height: 138px;
   margin-top: 5rem;
   width: 100%;
-  text-align: center;  
+  text-align: center;
   @include flex-center;
   font-size: 2rem;
-  color: #EB5757;
+  color: #ffff;
+  @include sp{
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
 }
