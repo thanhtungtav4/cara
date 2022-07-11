@@ -1,0 +1,33 @@
+.m-category{
+    ul{
+        @include flex;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+        justify-content: space-between;
+        li{
+            width: calc(20% - 16px);
+            border-radius: 10px;
+            position: relative;
+            &:hover{
+                p{
+                    color: #EB5757;
+                }
+            }
+            picture{
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 19.7%, rgba(0, 0, 0, 0) 46.94%);
+                filter: drop-shadow(0px 0px 20px rgba(104, 104, 104, 0.25));
+                border-radius: 10px;
+            }
+            p{
+                position: absolute;
+                bottom: 10px;
+                left: 20%;
+                right: 20%;
+                color: #ffff;
+                font-weight: 600;
+                font-style: 1.8rem;
+
+            }
+        }
+    }
+}
