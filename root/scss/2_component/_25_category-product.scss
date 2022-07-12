@@ -1,0 +1,126 @@
+.m-pcategory{
+  &_inner{
+    @include flex;
+    flex-wrap: wrap;
+    .title{
+      margin-bottom: 2rem;
+    }
+  }
+  &_filter{
+    width: calc(25% - 10px);
+    background-color: white;
+    @include sp{
+      width: 100%;
+      transform: translateX(-100%);
+      display: none;
+    }
+    &_inner{
+      box-shadow: 0px 0px 20px rgba(104, 104, 104, 0.25);
+      border-radius: 5px;
+      height: 500px;
+      margin-right: 10px;
+      padding: 15px;
+    }
+    &.js_filter{
+      height: 100vh;
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 80%;
+      transform: translateX(-15px);
+      z-index: 99;
+      &::after{
+        background-color: #888;
+        content: '';
+      }
+      .m-pcategory_filter{
+        box-shadow: 0px 0px 20px rgba(104, 104, 104, 0.25);
+        border-radius: 5px;
+        z-index: 99;
+      }
+      .m-pcategory_filter_inner{
+        box-shadow: unset;
+        border-radius: 0;
+        height: unset;
+      }
+    }
+  }
+  &_list{
+    width: calc(75% - 10px);
+    margin-left: 10px;
+    .tool{
+      width: 100%;
+      @include flex-jbetween;
+      align-items: center;
+      height: 77px;
+      background: #F5F5F5;
+      padding: 0 15px;
+      @include sp{
+        padding: 0 10px;
+        position: relative;
+      }
+      .left, .right{
+        @include flex;
+        align-items: center;
+      }
+      .left{
+        @include sp{
+          position: absolute;
+          top: 12px;
+        }
+        a{
+          margin-left: 2rem;
+          @include sp{
+            margin-left: 0;
+            margin-right: 15px;
+          }
+        }
+      }
+      .right{
+        @include sp{
+          justify-content: end;
+        }
+        form{
+          margin-left: 2rem;
+          select{
+            border: 1px solid #e1e1e1;
+            cursor: pointer;
+            color: #888;
+            height: 3rem;
+            padding: 0 2.9em 0 1em;
+          }
+          #per_page{
+            width: 137px;
+            @include sp{
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+    @include sp{
+      width: 100%;
+      margin-left: 0;
+    }
+    &_inner{
+      width: 100%;
+      @include flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -10px;
+      @include sp{
+        margin: 0;
+      }
+      a{text-decoration: none;}
+      li{
+        width: calc(33.3% - 20px);
+        margin-top: 5rem;
+        margin-left: 10px;
+        margin-right: 10px;
+        @include sp{
+          width: calc(50% - 20px);
+        }
+      }
+    }
+  }
+}

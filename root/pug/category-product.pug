@@ -7,12 +7,30 @@ block vars
   -pageID       = 'top'
   -path         = ''
   -ispage       = 'category product'
-
+block after_page
+  script.
+    function opent_filter(){
+        document.getElementById("is_filter").classList.add("js_filter");
+        document.body.classList.add('js_bg');
+    }
+    document.addEventListener("mouseup", function(event) {
+      var obj = document.getElementById("is_filter");
+      var js_filter = document.getElementsByClassName('js_filter');
+      if(js_filter.length > 0){
+        if (!obj.contains(event.target)) {
+          document.getElementById("is_filter").classList.remove("js_filter");
+          document.body.classList.remove('js_bg');
+        }
+        //- else {
+        //-     alert("Inside click detected!");
+        //- }
+      }
+    });
 
 block container
   .l-container
     include _modules/breadcrumbs
   .l-container
-    include _modules/block_category
+    include _modules/block_category_product
 
 
