@@ -4,6 +4,9 @@
     margin: 4rem 0;
     font-size: 1.4rem;
     font-weight: 300;
+    @include sp{
+        margin: 2rem 0;
+    }
     li{
         color: #2B2929;
         a{

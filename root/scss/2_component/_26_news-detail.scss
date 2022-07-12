@@ -1,0 +1,181 @@
+.m-tag{
+    @include flex-center;
+    padding-bottom: 20px;
+    @include sp{
+        margin-top: 2rem;
+    }
+    li{
+        a{
+            background: #F5F5F5;
+            border: none;
+            color: #434343;
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 4px;
+            padding: 15px 32px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}
+.c-news{
+    @include flex;
+    a{
+        text-decoration: none;
+    }
+    &_img{
+        margin-bottom: 2rem;
+    }
+    &_inner{
+        width: calc(80% - 10px);
+        margin-right: 10px;
+        font-size: 1.1rem;
+        p{
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        h2{
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        h3{
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        h1{
+            font-size: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+        .date{
+            @include flex-center;
+            color: #595959;
+            margin-bottom: 3rem;
+            margin-top: 1rem;
+        }
+        img{
+            border-radius: 4px;
+        }
+        picture{
+            display: inline-block;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        @include sp{
+            h1{
+                font-size: 2rem;
+            }
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    &_sidebar{
+        width: calc(20% - 10px);
+        margin-left: 10px;
+        height: 100%;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 100px;
+        a{
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+    }
+    &_tool{
+        @include flex-jbetween;
+        padding-bottom: 1.2rem;
+        margin-top: 3rem;
+        border-bottom: 1px solid #aaa;
+        .left, .right{
+            @include flex;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            @include sp{
+                font-size: 1.4rem;
+            }
+        }
+        .left{
+            p{
+                margin-right: 3rem;
+                @include flex;
+                align-items: center;
+                svg{
+                    padding-right: 8px;
+                }
+                @include sp{
+                    margin-right: 1rem;
+                    svg{
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+        .right{
+            a{
+                margin-left: 10px;
+                @include sp{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    &_author{
+        margin-top: 1.2rem;
+        &_inner {
+            @include flex;
+            @include sp{
+                flex-direction: column;
+            }
+            .avata{
+                width: 20%;
+                align-items: center;
+                @include flex-center;
+                flex-direction: column;
+                @include sp{
+                    width: 100%;
+                }
+                img{
+                    border-radius: 50%;
+                    display: inline-block;
+                    width: 114px;
+                    height: 114px;
+                    margin-bottom: 1rem;
+                }
+                .social{
+                    a{
+                        text-decoration: none;
+                        margin: 1rem 0.5rem;
+                    }
+                }
+            }
+            .description{
+                width: 80%;
+                padding-top: 15px;
+                padding-bottom: 50px;
+                @include sp{
+                    width: 100%;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+                .ttl{
+                    font-size: 1.7rem;
+                    margin-bottom: 1.5rem;
+                    @include sp{
+                        text-align: center;
+                    }
+                }
+                p{
+                    line-height: 1.5; 
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
