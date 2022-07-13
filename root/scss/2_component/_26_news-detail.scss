@@ -28,6 +28,9 @@
     }
     &_img{
         margin-bottom: 2rem;
+        @include sp{
+            margin-bottom: 1rem;
+        }
     }
     &_inner{
         width: calc(80% - 10px);
@@ -172,7 +175,7 @@
                     }
                 }
                 p{
-                    line-height: 1.5; 
+                    line-height: 1.5;
                     text-align: justify;
                 }
             }

@@ -1,0 +1,96 @@
+.c-page{
+    @include flex;
+    a{
+        text-decoration: none;
+    }
+    &_img{
+        margin-bottom: 2rem;
+        @include sp{
+            margin-bottom: 1rem;
+        }
+    }
+    &_inner{
+        width: calc(70% - 10px);
+        margin-left: 10px;
+        font-size: 1.1rem;
+        @include sp{
+            width: 100%;
+            margin-left: 0;
+        }
+        p{
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+        h2{
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        h3{
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        h1{
+            font-size: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+        .date{
+            @include flex-center;
+            color: #595959;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        img{
+            border-radius: 4px;
+        }
+        picture{
+            display: inline-block;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        @include sp{
+            h1{
+                font-size: 2rem;
+            }
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+    &_sidebar{
+        width: calc(30% - 10px);
+        margin-right: 10px;
+        background: #F1F0F0;
+        padding: 60px;
+        height: -webkit-fill-available;
+        @include sp{
+            width: 100%;
+            margin-right: 0;
+            order: 1;
+            margin-top: 2rem;
+            padding: 30px;
+        }
+        ul{
+            li{
+                padding: 1.8rem 0;
+                border-bottom: 1px solid #1E1C1C;
+                &:first-of-type{
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                &:last-of-type{
+                    border-bottom: 0;
+                }
+                a{
+                    display: inline-block;
+                    color: #1E1C1C;
+                    font-weight: 500;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
