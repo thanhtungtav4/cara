@@ -15,7 +15,6 @@
 	&__add{
 		background: #ABABAB;
 		img{
-			width: 16px;
 			height: 20px;
 		}
 
@@ -60,4 +59,23 @@
 	@include sp{
 		display: flex !important;
 	}
+}
+.added_to_cart{
+  visibility: hidden;
+	position: relative;
+}
+.added_to_cart:after{
+	background: #EB6A6A;
+  content: url(../../assets/images/eye.svg) !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+  visibility: visible;
+	border-radius: 5px;
+	text-align: center;
+	display: block;
+	padding: 7px 10px;
+	width: 20px;
+	height: 23px;
+	margin-left: 0 !important;
 }
