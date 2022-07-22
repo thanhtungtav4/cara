@@ -3,6 +3,9 @@
 ------------------------------------------------------------*/
 .btn_area{
 	@include flex;
+	justify-content: end;
+	width: 100px;
+	min-width: 100px;
 	a{
 		border-radius: 5px;
 		text-align: center;
