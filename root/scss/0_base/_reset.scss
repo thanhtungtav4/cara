@@ -74,7 +74,9 @@ video {
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
 }
-
+.star-rating span {
+	font-family: "Font Awesome 5 Free" !important;
+}
 article,
 aside,
 details,

@@ -28,6 +28,11 @@
 		display: block;
 	}
 }
+@media (max-width: 576px) {
+	.l-container {
+			width: 576px;
+	}
+}
 @media (min-width: 576px) {
 	.l-container {
 			width: 540px;
