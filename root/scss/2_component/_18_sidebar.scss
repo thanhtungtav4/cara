@@ -1,6 +1,6 @@
 .c-sidebar{
     text-align: left;
-    width: 35%;
+    width: 40%;
     @include sp{
         width: 100%;
     }
@@ -42,6 +42,7 @@
             font-size: 1.8rem;
             font-weight: 300;
             transition: 0.5 ease-in-out;
+            border: 0;
             &:hover{
                 background-color: #EB6A6A;
                 border: #EB6A6A;

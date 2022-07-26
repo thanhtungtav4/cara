@@ -85,3 +85,11 @@
 	height: 23px;
 	margin-left: 0 !important;
 }
+.update_cart{
+	@include flex;
+	justify-content: flex-start;
+	margin-top: 1rem;
+	border: 0;
+	background-color: #EB6A6A;
+	padding: 8px 15px;
+}

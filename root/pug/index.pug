@@ -69,6 +69,30 @@ block after_page
           arrows: false,
           lazyLoad: 'ondemand',
         });
+        $('.m-item').not('.slick-initialized').slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          dots: false,
+          arrows: false,
+          lazyLoad: 'progressive',
+          responsive: [
+             {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            }
+          ]
+        });
         $('.m-new__prev').click(function(e){
           $('.m-new__slick').slick('slickPrev');
         } );
@@ -122,7 +146,7 @@ block container
     include _modules/home-product
     include _modules/home-product
     include _modules/home-product02
-    include _modules/home-product02
+    include _modules/home-product03
     include _modules/experience
     include _modules/shop-service
     include _modules/slide-new

@@ -81,6 +81,9 @@
     @include flex;
     flex-direction: column;
     text-align: right;
+    @include sp{
+        text-align: left;
+    }
     span{
         color: #EB6A6A;
         font-weight: 400;
