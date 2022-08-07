@@ -82,6 +82,25 @@
             border-width: 0 1px 1px 0;
             font-weight: 400;
             text-align: left;
+            ul{
+                li{
+                    line-height: 1.5;
+                    list-style-type: circle;
+                    margin-left: 2rem;
+                }
+            }
+            .styleimg01{
+                width: 260px;
+                height: 90px;
+            }
+            .styleimg02{
+                width: 90px;
+                height: 90px;
+            }
+            .styleimg03{
+                width: 160px;
+                height: 90px;
+            }
         }
         table, th, td {
             border: 1px solid rgba(0,0,0,.1);
