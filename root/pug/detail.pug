@@ -39,14 +39,14 @@ block after_page
           ]
         });
         $('.m-product__prev').click(function(e){
-          $('.m-product__slick').slick('slickPrev');
+          $('.m-product__inner ul').slick('slickPrev');
         } );
         $('.m-product__next').click(function(e){
-          $('.m-product__slick').slick('slickNext');
+          $('.m-product__inner ul').slick('slickNext');
         } );
-        $('.m-product__slick02').not('.slick-initialized').slick({
+        $('.m-product__inner ul').not('.slick-initialized').slick({
           infinite: true,
-          slidesToShow: 1,
+          slidesToShow: 4,
           slidesToScroll: 1,
           dots: false,
           arrows: false,
@@ -71,5 +71,5 @@ block container
     include _modules/breadcrumbs
     include _modules/sure
     include _modules/tab
-    include _modules/home-product02
+    include _modules/home-product03
     include _modules/info
