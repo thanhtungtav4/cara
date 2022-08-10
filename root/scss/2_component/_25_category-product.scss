@@ -102,7 +102,7 @@
       width: 100%;
       margin-left: 0;
     }
-    &_inner{
+    &_inner, ul.products {
       width: 100%;
       @include flex;
       flex-wrap: wrap;
