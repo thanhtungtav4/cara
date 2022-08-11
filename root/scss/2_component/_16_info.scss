@@ -1,6 +1,7 @@
 .c-info {
     @include flex-jbetween;
     align-items: stretch;
+    flex-wrap: wrap;
     .list, .video{
         width: calc(50% - 20px);
         margin: 10px;
