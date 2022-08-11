@@ -2,6 +2,16 @@
     width: 100%;
     text-align: center;
     position: relative;
+    &_inner{
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
     .slick-dots {
         @include flex-center;
         margin: 0;
@@ -35,6 +45,6 @@
             li.slick-active button {
                 background-color: #EB6A6A;
             }
-        
+
     }
 }
