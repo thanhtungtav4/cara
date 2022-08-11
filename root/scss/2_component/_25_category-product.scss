@@ -64,7 +64,6 @@
       }
       .left{
         @include sp{
-          position: absolute;
           top: 28px;
         }
         a{

@@ -115,6 +115,9 @@
         &-top{
             @include flex-jbetween;
             margin-top: 20px;
+            p{
+                text-align: end;
+            }
             @include sp{
                 flex-direction: column;
                 margin-top: 7px;
