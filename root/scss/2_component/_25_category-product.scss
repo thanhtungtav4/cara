@@ -65,7 +65,7 @@
       .left{
         @include sp{
           position: absolute;
-          top: 12px;
+          top: 28px;
         }
         a{
           margin-left: 2rem;
@@ -100,6 +100,10 @@
     @include sp{
       width: 100%;
       margin-left: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
     }
     &_inner, ul.products {
       width: 100%;
