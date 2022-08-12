@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
-const sass = require('gulp-sass');
+// const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const del = require('del');
