@@ -132,9 +132,19 @@ block after_page
           infinite:false,
           slidesToScroll: 1,
           autoplay: true,
-          autoplaySpeed: 2000
+          autoplaySpeed: 2000,
             // dots: false, Boolean
             // arrows: false, Boolean
+          
+           responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
         });
 
 
