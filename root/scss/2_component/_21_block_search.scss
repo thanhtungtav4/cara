@@ -99,6 +99,48 @@
       }
     }
   }
+  &.job{
+    select{
+      padding: 10px;
+      margin: 0 5px;
+    }
+    .m-search_inner input[type=submit] {
+      margin-left: 5px;
+    }
+    input[type=text]{
+      width: calc(100% - 400px);
+      padding: 0 15px;
+      @include min(768px){
+        margin-right: 5px;
+      }
+      @include sp{
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0 2.5px;
+        border-radius: 5px;
+      }
+    }
+    @include sp{
+      form{
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      select{
+        margin: 0 0 1rem;
+        width: calc(50% - 5px);
+      }
+      .m-search_inner{
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+        input[type=submit].search-submit {
+          width: 100% !important;
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
 .m-noti{
   background-color: #1E1C1C;
