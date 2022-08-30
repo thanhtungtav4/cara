@@ -62,8 +62,8 @@ block container
     .caras_content
       .caras_content__inner
         h3 Về Caras Lens
-        p Caras với hơn 5 năm chăm sóc và làm đẹp cho đôi mắt Việt. Tự hào là nhãn hàng đầu tiên mang đến dòng kính áp tròng kích cỡ nhỏ - phù hợp với đôi mắt Á Đông.<br>
-        p Mỗi sản phẩm của Caras đều được tích hợp công nghệ hiện đại theo tiêu chuẩn USA, giúp đôi mắt của bạn đẹp hơn nhưng vẫn đảm bảo an toàn tuyệt đối. <br>
+        p Caras với hơn 5 năm chăm sóc và làm đẹp cho đôi mắt Việt. Tự hào là nhãn hàng đầu tiên mang đến dòng kính áp tròng kích cỡ nhỏ - phù hợp với đôi mắt Á Đông.
+        p Mỗi sản phẩm của Caras đều được tích hợp công nghệ hiện đại theo tiêu chuẩn USA, giúp đôi mắt của bạn đẹp hơn nhưng vẫn đảm bảo an toàn tuyệt đối. 
         p Chúng tôi luôn học hỏi và phát triển để giúp đôi mắt của bạn luôn tỏa sáng và nhìn thế giới tươi đẹp này qua mỗi sản phẩm của Caras.
   section.caras_promise 
     .caras-intro__promise.l-container
@@ -208,11 +208,8 @@ block container
                   rect(width='86.5217' height='80' fill='white' transform='translate(0.739258)')
             p Khiêm tốn
   .l-container
-    section
-      .caras-intro__video
-        video(width='' controls='')
-          source(src='mov_bbb.mp4' type='video/mp4')
-          source(src='mov_bbb.ogg' type='video/ogg')
+    section.container_video
+        <iframe width="100%" src="https://www.youtube.com/embed/2GV8PylPW2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     include _modules/shop-service.pug
     section
       .caras-intro__service
