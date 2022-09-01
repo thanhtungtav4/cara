@@ -28,6 +28,7 @@
       width: 80%;
       transform: translateX(-15px);
       z-index: 99;
+      overflow-y: scroll;
       &::after{
         background-color: #888;
         content: '';
