@@ -55,6 +55,10 @@ function toggleMenu(){
     }
 
 }
+function toggleChat(){
+  let chat = document.getElementsByClassName("m-chat_inner");
+  chat[0].classList.toggle("js-active");
+}
 jQuery.event.special.touchstart = {
   setup: function( _, ns, handle ) {
       this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });

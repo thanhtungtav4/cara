@@ -4,3 +4,4 @@ https://web.dev/browser-level-image-lazy-loading/
 https://kenwheeler.github.io/slick/
 https://cara-six.vercel.app/
 https://compressimage.io/
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_form_steps
