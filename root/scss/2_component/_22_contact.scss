@@ -4,7 +4,6 @@
     background-color: #F1F0F0;
     .l-container{
         @include flex-jbetween;
-        width: 100%;
         flex-wrap: wrap;
         .map{
             width: calc(60% - 10px);
@@ -37,7 +36,10 @@
                 padding: 15px 20px;
             }
         }
-       
+        .c-info{
+            margin: 0 auto;
+        }
+
     }
-   
+
 }

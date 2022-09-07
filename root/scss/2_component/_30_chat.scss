@@ -6,13 +6,15 @@
   width: 70px;
   &_inner{
     width: 360px;
-    height: 400px;
+    height: 450px;
     max-width: 100%;
     visibility: hidden;
     transform: translateX(400%);
     background-color: white;
     border: 1px solid #c6ced6;
     transition: visibility 0.5s ;
+    position: relative;
+    display: none;
     &.js-active{
       transform: translateX(0);
       visibility: visible;
@@ -20,6 +22,7 @@
       right: 3rem;
       position: fixed;
       border-radius: 5px;
+      display: inline-block;
       form{
         @include flex-center;
         height: 100%;
@@ -34,5 +37,40 @@
         font-size: 4rem;
       }
     }
+    .tab {
+      display: none;
+    }
+    .step.active {
+      opacity: 1;
+    }
   }
+  &_top{
+    background-color: #2B2929;
+    height: 60px;
+    position: absolute;
+    top: -1px;
+    width: 101%;
+    @include flex-jbetween;
+    align-items: center;
+    padding: 0 15px;
+    p{
+      font-weight: 300;
+      font-size: 1.8rem;
+      color: #FFFFFF;
+      margin: 0 auto;
+    }
+  }
+  &_bottom{
+    position: absolute;
+    bottom: 2rem;
+    button{
+      background: #EB5757;
+      display: block;
+      width: 320px;
+      border: 0;
+      color: white;
+      padding: 10px;
+    }
+  }
+
 }
