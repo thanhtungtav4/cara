@@ -132,6 +132,11 @@ function validateForm() {
 //   //... and adds the "active" class on the current step:
 //   x[n].className += " active";
 // }
+
+$('#regForm').submit(function() {
+  console.log($(this).serialize());
+  return false;
+});
 ///
 jQuery.event.special.touchstart = {
   setup: function( _, ns, handle ) {

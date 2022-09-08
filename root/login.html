@@ -415,7 +415,7 @@
         </picture>
       </div>
       <div class="m-chat_inner">
-        <form id="regForm" action="#">
+        <form id="regForm">
           <div class="m-chat_top">
             <button id="prevBtn" type="button" onclick="nextPrev(-1)"><svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
@@ -432,26 +432,40 @@
           </div>
           <div class="tab">
             <p class="tab_ttl center">Chúng tôi có thể giúp gì cho bạn ?</p><img src="assets/images/chat_1.svg" data-src="assets/images/chat_1.svg" loading="lazy">
-            <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Tư vấn">
-            <label for="demand1">Tư vấn</label><br>
-            <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Mua hàng">
-            <label for="demand2">Mua hàng</label>
+            <div class="radiobtn">
+              <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Tư vấn" checked>
+              <label for="demand1">Tư vấn</label>
+            </div>
+            <div class="radiobtn">
+              <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Mua hàng">
+              <label for="demand2">Mua hàng</label>
+            </div>
           </div>
           <div class="tab">
             <p class="tab_ttl center">Bạn cần chúng tôi tư vấn về điều gì ?</p><img src="assets/images/chat_2.svg" data-src="assets/images/chat_2.svg" loading="lazy">
-            <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Tư vấn về kính áp tròng">
-            <label for="demand1">Tư vấn về kính áp tròng</label><br>
-            <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Tư vấn khác">
-            <label for="demand2">Tư vấn khác</label>
+            <div class="radiobtn">
+              <input id="support" type="radio" oninput="this.className = ''" name="support" value="Tư vấn về kính áp tròng" checked>
+              <label for="support">Tư vấn về kính áp tròng</label>
+            </div>
+            <div class="radiobtn">
+              <input id="support2" type="radio" oninput="this.className = ''" name="support" value="Tư vấn khác">
+              <label for="support2">Tư vấn khác</label>
+            </div>
           </div>
           <div class="tab">
             <p class="tab_ttl center">1. Bạn có tật khúc xạ mắt không?</p><img src="assets/images/chat_3.svg" data-src="assets/images/chat_3.svg" loading="lazy">
-            <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Không cận">
-            <label for="demand1">Không cận</label><br>
-            <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận và loạn thị">
-            <label for="demand2">Cận và loạn thị</label><br>
-            <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận thị">
-            <label for="demand2">Cận thị</label>
+            <div class="radiobtn">
+              <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Không cận" checked>
+              <label for="demand1">Không cận</label>
+            </div>
+            <div class="radiobtn">
+              <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận và loạn thị">
+              <label for="demand2">Cận và loạn thị</label>
+            </div>
+            <div class="radiobtn">
+              <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận thị">
+              <label for="demand2">Cận thị</label>
+            </div>
           </div>
           <div class="tab">
             <p class="tab_ttl center">2. Bạn cận bao nhiêu độ?</p>
@@ -472,17 +486,25 @@
           </div>
           <div class="tab">
             <p class="tab_ttl center">3. Bạn thích tròng lens size  như thế nào?</p><img src="assets/images/chat_3.svg" data-src="assets/images/chat_3.svg" loading="lazy">
-            <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Không cận">
-            <label for="demand1">Size S (Không giãn)</label><br>
-            <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận và loạn thị">
-            <label for="demand2">Size M (Giãn nhẹ)</label>
+            <div class="radiobtn">
+              <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Không cận" checked>
+              <label for="demand1">Size S (Không giãn)</label>
+            </div>
+            <div class="radiobtn">
+              <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận và loạn thị">
+              <label for="demand2">Size M (Giãn nhẹ)</label>
+            </div>
           </div>
           <div class="tab">
             <p class="tab_ttl center">4. Bạn sử dụng lens trong dịp nào?</p><img src="assets/images/chat_3.svg" data-src="assets/images/chat_3.svg" loading="lazy">
-            <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Không cận">
-            <label for="demand1">Hàng ngày, đi làm, đi học</label><br>
-            <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận và loạn thị">
-            <label for="demand2">Đi chơi, bar, pub</label>
+            <div class="radiobtn">
+              <input id="demand1" type="radio" oninput="this.className = ''" name="demand" value="Không cận" checked>
+              <label for="demand1">Hàng ngày, đi làm, đi học</label>
+            </div>
+            <div class="radiobtn">
+              <input id="demand2" type="radio" oninput="this.className = ''" name="demand" value="Cận và loạn thị">
+              <label for="demand2">Đi chơi, bar, pub</label>
+            </div>
           </div>
         </form>
       </div>
