@@ -39,6 +39,10 @@
     }
     .tab {
       display: none;
+			&_ttl {
+				font-size: 2rem;
+				font-weight: 600;
+			}
     }
     .step.active {
       opacity: 1;
@@ -84,6 +88,7 @@
 		padding: 10px 20px;
 		border: 2px solid lighten($accentcolor, 20%);
 		margin-bottom: 5px;
+		color: #fff;
 		cursor: pointer;
 		&:after,
 		&:before {
