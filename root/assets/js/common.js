@@ -38,8 +38,8 @@ function toggleMenu(){
     '  />'+
     '</svg>'+
     '              </li>';
-    let html_appent= '<li class="c-menu c-menu__logo"><a href="#"><picture>'+
-    '                  <source srcset="assets/images/logo.webp" type="image/webp"><img src="assets/images/logo.png" data-src="assets/images/logo.png" alt="logo">'+
+    let html_appent= '<li class="c-menu c-menu__logo"><a href="/"><picture>'+
+    '                  <source srcset="/wp-content/themes/storefront-child/assets/images/caras_logo.webp" type="image/webp"><img src="/wp-content/themes/storefront-child/assets/images/caras_logo.png" data-src="/wp-content/themes/storefront-child/assets/images/caras_logo.png" alt="logo caras">'+
     '                </picture></a>'+
     '              </li>';
     let html_appentLang = '<li class="c-menu c-menu__logo"><a href="#">Tiếng Việt</a>'+

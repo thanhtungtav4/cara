@@ -8,6 +8,7 @@
         h4{
             @include ttl4;
             margin-bottom: 1rem;
+            font-size: 3rem;
         }
         ul{
             @include flex-jbetween;

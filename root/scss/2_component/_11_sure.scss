@@ -18,6 +18,9 @@
             &.slick-slide{
                 display: flex;
             }
+            @include sp{
+                height: 180px;
+            }
             p{
                 padding: 0 15px;
                 z-index: 1;

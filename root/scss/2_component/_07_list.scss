@@ -90,7 +90,7 @@
   &__img{
     position: relative;
     width: 100%;
-    height: 264px;
+    height: 165px;
     overflow: hidden;
     img{
       position: absolute;
@@ -100,11 +100,12 @@
   }
   &__content{
     color: black;
-    padding: 23px 15px;
+    padding: 10px 15px;
     h3{
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       font-weight: 700;
       margin-bottom: 5px;
+      @include truncate;
     }
     p{
       margin-top: 10px;

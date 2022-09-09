@@ -1,5 +1,5 @@
 .c-shopservice{
-  margin: 6rem auto;
+  margin: 3rem auto;
   @include sp{
     margin: 3rem auto;
   }
@@ -11,30 +11,47 @@
   &__item{
     width: calc(25% - 20px);
     margin: 10px;
+    text-align: center;
     @include flex;
     flex-direction: column;
     @include sp{
       width: calc(50% - 10px);
       margin: 5px;
     }
+    @include min(768px){
+      &:not(:last-child){
+        border-right: 1.5px solid rgba(40, 40, 40, 0.443);
+      }
+    }
     .image{
       width: 323px;
       height: 520px;
     }
-    .ttl{
-      font-size: 3.2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+    picture{
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto;
       @include sp{
-        font-size: 2rem;
+        height: 120px;
       }
     }
-    &:nth-child(even){
-      .image{
-        order: 1;
+    img{
+      width: 120px;
+      height: auto;
+      @include sp{
+        width: 100px;
       }
-      .ttl{
-        order: 2;
+    }
+    .ttl{
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-align: center;
+      @include sp{
+        font-size: 1.8rem;
       }
     }
   }
