@@ -4,11 +4,11 @@
         li{
             text-align: center;
             width: 323px;
-            height: 216px;
+            height: 165px;
             box-shadow: 0px 0px 20px rgba(104, 104, 104, 0.25);
             border-radius: 10px;
             align-items: center;
-            margin: 20px 10px 60px;
+            margin: 20px 10px 30px;
             font-size: 2rem;
             line-height: 1.2;
             font-weight: 400;
@@ -19,8 +19,9 @@
                 display: flex;
             }
             p{
-                padding: 0 40px;
+                padding: 0 15px;
                 z-index: 1;
+                font-size: 1.8rem;
             }
             &:hover{
                 transform: scale(1.05);
@@ -33,6 +34,9 @@
                 top: 20%;
                 bottom: 20%;
                 left: 0;
+                img{
+                    height: 105px;
+                }
             }
             &:last-child{
                 picture{

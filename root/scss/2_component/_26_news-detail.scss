@@ -36,8 +36,8 @@
         width: calc(80% - 10px);
         margin-right: 10px;
         font-size: 1.1rem;
-        p{
-            margin-bottom: 1rem;
+        p, li{
+            margin-bottom: 1.5rem;
             font-size: 1.5rem;
             line-height: 1.5;
         }
@@ -70,6 +70,9 @@
             display: inline-block;
             margin: 2rem 0;
             text-align: center;
+        }
+        dfn, cite, em, i {
+            font-style: italic;
         }
         @include sp{
             h1{
