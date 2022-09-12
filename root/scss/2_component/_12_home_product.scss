@@ -197,6 +197,11 @@
                                         display: none;
                                     }
                                 }
+                                &.item_show{
+                                    li{
+                                        display: block;
+                                    }
+                                }
                             }
                         }
                         &:nth-of-type(even) {
@@ -213,6 +218,11 @@
                                     }
                                     &:nth-of-type(8) {
                                         display: none;
+                                    }
+                                }
+                                &.item_show{
+                                    li{
+                                        display: block;
                                     }
                                 }
                             }
