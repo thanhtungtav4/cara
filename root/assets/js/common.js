@@ -55,10 +55,65 @@ function toggleMenu(){
     }
 
 }
+// only product detail
+function toggleVariations(){
+  const is_true = document.getElementsByClassName("js_hide");
+  const is_toggle = document.getElementsByClassName("fold");
+  if(is_true.length >= 1){
+    document.getElementsByClassName('js_down')[0].classList.add('d-none');
+    document.getElementsByClassName('js_up')[0].classList.remove('d-none');
+    for (const item of is_toggle){
+        item.classList.remove("js_hide");
+    }
+  }
+  else{
+    document.getElementsByClassName('js_up')[0].classList.add('d-none');
+    document.getElementsByClassName('js_down')[0].classList.remove('d-none');
+    for (const item of is_toggle){
+      item.classList.add("js_hide");
+    }
+  }
+}
 function toggleChat(){
   let chat = document.getElementsByClassName("m-chat_inner");
   chat[0].classList.toggle("js-active");
 }
+///
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ) {
+      this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+  }
+};
+jQuery.event.special.touchmove = {
+  setup: function( _, ns, handle ) {
+      this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+  }
+};
+jQuery.event.special.wheel = {
+  setup: function( _, ns, handle ){
+      this.addEventListener("wheel", handle, { passive: true });
+  }
+};
+jQuery.event.special.mousewheel = {
+  setup: function( _, ns, handle ){
+      this.addEventListener("mousewheel", handle, { passive: true });
+  }
+};
+
+let positionBf = $(window).scrollTop();
+$(window).scroll(function(){
+  let positionAf = $(this).scrollTop();
+  if( positionAf <= 150){
+      document.getElementsByClassName("c-header")[0].classList.remove("js_scroll");
+  }
+  else{
+    if(positionBf >= 85){
+      document.getElementsByClassName("c-header")[0].classList.add("js_scroll");
+    }
+  }
+  positionBf = positionAf;
+});
+
 ///
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
@@ -87,6 +142,7 @@ function nextPrev(n) {
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
+  controlShow();
   // Hide the current tab:
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
@@ -122,53 +178,19 @@ function validateForm() {
   }
   return valid; // return the valid status
 }
+function controlShow(){
 
-// function fixStepIndicator(n) {
-//   // This function removes the "active" class of all steps...
-//   var i, x = document.getElementsByClassName("step");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].className = x[i].className.replace(" active", "");
-//   }
-//   //... and adds the "active" class on the current step:
-//   x[n].className += " active";
-// }
-
+  const dataTab = $("input[type=radio]:checked");
+  console.log(dataTab.data('tab'));
+  // var is_Tab = $(".tab");
+  // is_Tab.forEach(function(tab) {
+    // console.log(tab);
+    // debugger;
+  // })
+  // const is_check = is_Tab[currentTab].getElementsByTagName("input");
+  // console.log(is_check);
+}
 $('#regForm').submit(function() {
   console.log($(this).serialize());
   return false;
-});
-///
-jQuery.event.special.touchstart = {
-  setup: function( _, ns, handle ) {
-      this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
-  }
-};
-jQuery.event.special.touchmove = {
-  setup: function( _, ns, handle ) {
-      this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
-  }
-};
-jQuery.event.special.wheel = {
-  setup: function( _, ns, handle ){
-      this.addEventListener("wheel", handle, { passive: true });
-  }
-};
-jQuery.event.special.mousewheel = {
-  setup: function( _, ns, handle ){
-      this.addEventListener("mousewheel", handle, { passive: true });
-  }
-};
-
-let positionBf = $(window).scrollTop();
-$(window).scroll(function(){
-  let positionAf = $(this).scrollTop();
-  if( positionAf <= 150){
-      document.getElementsByClassName("c-header")[0].classList.remove("js_scroll");
-  }
-  else{
-    if(positionBf >= 85){
-      document.getElementsByClassName("c-header")[0].classList.add("js_scroll");
-    }
-  }
-  positionBf = positionAf;
 });
