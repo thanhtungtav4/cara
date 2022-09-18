@@ -6,7 +6,7 @@
   width: 70px;
   &_inner{
     width: 360px;
-    height: 550px;
+    height: auto;
     max-width: 100%;
     visibility: hidden;
     transform: translateX(400%);
@@ -15,6 +15,7 @@
     transition: visibility 0.5s ;
     position: relative;
     display: none;
+	z-index: 999;
     &.js-active{
       transform: translateX(0);
       visibility: visible;
@@ -23,9 +24,10 @@
       position: fixed;
       border-radius: 5px;
       display: inline-block;
+	  bottom: 2rem;
       form{
         @include flex-center;
-        height: 100%;
+        height: 500px;
       }
       .center{
         align-items: center;
@@ -39,17 +41,19 @@
     }
     .tab {
       display: none;
+	  text-align: center;
+	  height: 100%;
+	  width: 100%;
+		&_ttl {
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		img{
+			width: 200px;
+			height: auto;
+			margin: 0 auto;
 			text-align: center;
-			&_ttl {
-				font-size: 2rem;
-				font-weight: 600;
-			}
-			img{
-				width: 200px;
-				height: auto;
-				margin: 0 auto;
-				text-align: center;
-			}
+		}
     }
     .step.active {
       opacity: 1;
@@ -58,9 +62,9 @@
   &_top{
     background-color: #2B2929;
     height: 60px;
-    position: absolute;
-    top: -1px;
-    width: 101%;
+    // position: absolute;
+    // top: -1px;
+    // width: 101%;
     @include flex-jbetween;
     align-items: center;
     padding: 0 15px;
@@ -72,8 +76,9 @@
     }
   }
   &_bottom{
-    position: absolute;
-    bottom: 2rem;
+	position: absolute;
+	bottom: 1rem;
+	left: 5%;
     button{
       background: #EB5757;
       display: block;
