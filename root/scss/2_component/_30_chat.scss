@@ -88,6 +88,10 @@
       padding: 10px;
     }
   }
+	&_product{
+		height: 400px;
+		overflow-y: scroll;
+	}
 }
 .radiobtn {
 	position: relative;

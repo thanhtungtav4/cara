@@ -119,11 +119,11 @@ footer.c-footer
         p.tab_ttl.center Chúng tôi có thể giúp gì cho bạn ?
         img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
         .radiobtn
-          input#demand1(type='radio' name='demand' value='tu_van' data-tab="advise" checked)
+          input#demand1(type='radio' name='demand' value='tu_van' checked)
           label(for='demand1') Tư vấn
         .radiobtn
-          input#demand2(type='radio' name='demand'  data-tab="buyer" value='mua_hang')
-          label(for='demand2') Mua hàng    
+          input#demand2(type='radio' name='demand'  value='mua_hang')
+          label(for='demand2') Mua hàng
       .m-chat_bottom
           button#nextBtn(type="button"  onclick="nextPrev('.tab-wellcome')") TIẾP TỤC
     .tab.tab-tu_van
@@ -138,16 +138,65 @@ footer.c-footer
             <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
           </svg>
       .tab_inner
-      p.tab_ttl.center Tư vấn hỗ trợ khách hàng
-      img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
-      .radiobtn
-        input#advise1(type='radio' oninput="this.className = ''"  name='advise' value='Tư vấn' checked)
-        label(for='advise1') Tư vấn về kính áp tròng
-      .radiobtn
-        input#advise2(type='radio' oninput="this.className = ''"  name='advise' value='Mua hàng')
-        label(for='advise2') Tư vấn khác 
+        p.tab_ttl.center Tư vấn hỗ trợ khách hàng
+        img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
+        .radiobtn
+          input#advise1(type='radio'  name='advise' value='kinh_ap_trong' checked)
+          label(for='advise1') Tư vấn về kính áp tròng
+        .radiobtn
+          input#advise2(type='radio'  name='advise' value='tu_van_khac')
+          label(for='advise2') Tư vấn khác
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="nextPrev()") TIẾP TỤC      
+          button#nextBtn(type="button"  onclick="nextPrev('.tab-tu_van')") TIẾP TỤC
+    .tab.tab-tu_van_khac
+      .m-chat_top
+        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p Hỗ trợ qua Facebook
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        p.tab_ttl.center Tư vấn hỗ trợ khách hàng
+        a(href="https://www.facebook.com/" taget="_blank")
+          svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='150px' height='150px' viewbox='0 0 150 150' version='1.1')
+              defs
+                radialgradient#radial0(gradientunits='userSpaceOnUse' cx='0.19247' cy='0.99465' fx='0.19247' fy='0.99465' r='1.0896' gradienttransform='matrix(117.1875,0,0,116.785156,16.40625,17.871094)')
+                  stop(offset='0' style='stop-color:rgb(0%,60%,100%);stop-opacity:1;')
+                  stop(offset='0.60975' style='stop-color:rgb(62.745098%,20%,100%);stop-opacity:1;')
+                  stop(offset='0.93482' style='stop-color:rgb(100%,32.156863%,50.196078%);stop-opacity:1;')
+                  stop(offset='1' style='stop-color:rgb(100%,43.921569%,38.039216%);stop-opacity:1;')
+              g#surface1
+                path(style=' stroke:none;fill-rule:evenodd;fill:url(#radial0);' d='M 75 17.871094 C 41.992188 17.871094 16.40625 42.050781 16.40625 74.707031 C 16.40625 91.789062 23.40625 106.550781 34.808594 116.746094 C 35.765625 117.601562 36.34375 118.800781 36.382812 120.085938 L 36.699219 130.507812 C 36.804688 133.835938 40.238281 135.996094 43.28125 134.65625 L 54.910156 129.519531 C 55.894531 129.085938 57 129.003906 58.039062 129.289062 C 63.382812 130.761719 69.070312 131.542969 75 131.542969 C 108.007812 131.542969 133.59375 107.363281 133.59375 74.707031 C 133.59375 42.050781 108.007812 17.871094 75 17.871094 Z M 75 17.871094 ')
+                path(style=' stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;' d='M 39.816406 91.328125 L 57.027344 64.019531 C 59.765625 59.675781 65.628906 58.59375 69.734375 61.675781 L 83.425781 71.945312 C 84.679688 72.886719 86.410156 72.878906 87.660156 71.929688 L 106.148438 57.898438 C 108.617188 56.027344 111.835938 58.980469 110.1875 61.601562 L 92.972656 88.910156 C 90.234375 93.253906 84.371094 94.335938 80.265625 91.253906 L 66.574219 80.984375 C 65.320312 80.042969 63.589844 80.050781 62.339844 81 L 43.851562 95.03125 C 41.382812 96.902344 38.164062 93.949219 39.816406 91.328125 Z M 39.816406 91.328125 ')
+
+    .tab.tab-mua_hang
+      .m-chat_top
+        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p HỖ TRỢ MUA HÀNG
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        ul.m-chat_product
+          include product-item
+          include product-item
+          include product-item
+          include product-item
+          include product-item
+          include product-item
+          include product-item
+          include product-item
+      .m-chat_bottom
+          button#nextBtn(type="button"  onclick="toggleChat()") Kết Thúc
+
     //- tab tư vấn
     //- .tab.advise
     //-   p.tab_ttl.center Tư vấn hỗ trợ khách hàng

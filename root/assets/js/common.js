@@ -139,13 +139,12 @@ showTab(currentTab); // Display the current tab
 //   //fixStepIndicator(n)
  }
 function nextPrev(Tabcurrent){
-  var inputCurrent = $(Tabcurrent).find("input:checked").val();
+  let inputCurrent = $(Tabcurrent).find("input:checked").val();
   console.log('tab-'+ inputCurrent);
   if(inputCurrent != undefined){
    //hide current tab
    $(Tabcurrent).css({"display": "none"});
    $('.tab-'+ inputCurrent).css({"display": "block"});
-
   }
 }
 
