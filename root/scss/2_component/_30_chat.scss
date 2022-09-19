@@ -91,6 +91,13 @@
 	&_product{
 		height: 400px;
 		overflow-y: scroll;
+		@include flex-jbetween;
+		flex-wrap: wrap;
+		padding: 10px;
+		li{
+			width: calc(50% - 10px);
+			margin: 1rem 0;
+		}
 	}
 }
 .radiobtn {
