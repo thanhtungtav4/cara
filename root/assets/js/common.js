@@ -141,10 +141,14 @@ showTab(currentTab); // Display the current tab
 function nextPrev(Tabcurrent){
   let inputCurrent = $(Tabcurrent).find("input:checked").val();
   console.log('tab-'+ inputCurrent);
-  if(inputCurrent != undefined){
-   //hide current tab
-   $(Tabcurrent).css({"display": "none"});
-   $('.tab-'+ inputCurrent).css({"display": "block"});
+  if(inputCurrent == undefined){
+    //hide current tab
+    $(Tabcurrent).css({"display": "none"});
+    $('.tab-giam-do-can').css({"display": "block"});
+   }
+  else{
+    $(Tabcurrent).css({"display": "none"});
+    $('.tab-'+ inputCurrent).css({"display": "block"});
   }
 }
 
