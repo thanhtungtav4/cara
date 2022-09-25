@@ -85,6 +85,12 @@
         }
       }
     }
+    .extra{
+      @include truncate;
+    }
+    .truncate{
+      @include truncate;
+    }
   }
   &_img{
     width: 100%;
