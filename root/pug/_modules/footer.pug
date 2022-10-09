@@ -105,32 +105,35 @@ a(href='#').m-messenger
     source(srcset=path+"assets/images/chatbot.webp" type="image/webp")
     img.lazyload(src=path+"assets/images/chatbot.png" data-src=path+"assets/images/chatbot.png" alt='chatbot' loading="lazy" width="70" height="70")
 .m-chat_inner
-  form(id="regForm")
-    .tab.tab-wellcome
+  form.js-chatbot(id="regForm")
+    .overlay-welcome
+      p XIN CHÀO
+    .tab.tab-wellcome#tab-welcome
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
-          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
-          </svg>
+        //- a#prevBtn(href="javascript:;" data-back="")
+        //-   <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        //-     <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+        //-   </svg>
         p HỖ TRỢ CHỌN LENS
         .close(onclick="toggleChat()")
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
           </svg>
       .tab_inner
-        p.tab_ttl.center Chúng tôi có thể giúp gì cho bạn ?
+        p.tab_ttl.center Chúng tôi có thể<br>giúp gì cho bạn ?
         img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
         .radiobtn
-          input#demand1(type='radio' name='demand' value='tu_van' checked)
+          input#demand1(type='radio' name='demand' data-value="#tab-tu-van" value='tu_van' checked)
           label(for='demand1') Tư vấn
         .radiobtn
-          input#demand2(type='radio' name='demand'  value='mua_hang')
+          input#demand2(type='radio' name='demand' data-value="#san-pham"   value='mua_hang')
           label(for='demand2') Mua hàng
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="nextPrev('.tab-wellcome')") TIẾP TỤC
-    .tab.tab-tu_van
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-tu_van#tab-tu-van
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+        a#prevBtn(href="javascript:;" data-back="#tab-welcome")
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
           </svg>
@@ -143,16 +146,43 @@ a(href='#').m-messenger
         p.tab_ttl.center Tư vấn hỗ trợ khách hàng
         img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
         .radiobtn
-          input#advise1(type='radio'  name='tu_van_kinh' value='kinh_ap_trong' checked)
+          input#advise1(type='radio' name='tu_van_kinh' data-value="#tab-kinh_ap_trong" value='kinh_ap_trong' checked)
           label(for='advise1') Tư vấn về kính áp tròng
         .radiobtn
-          input#advise2(type='radio'  name='tu_van_kinh' value='tu_van_khac')
+          input#advise2(type='radio' data-value="#tab-tu-van-khac" name='tu_van_kinh' value='tu_van_khac')
           label(for='advise2') Tư vấn khác
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="nextPrev('.tab-tu_van')") TIẾP TỤC
-    .tab.tab-tu_van_khac
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-tu_van#tab-tu-van-khac
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+        a#prevBtn(href="javascript:;" data-back="#tab-tu-van")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p HỖ TRỢ CHỌN LENS
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        p.tab_ttl.center Tư vấn hỗ trợ khách hàng
+        img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
+        .radiobtn
+          input#advise3(type='radio' data-value="#san-pham" name='tu_van_khac' value='kinh_ap_trong' checked)
+          label(for='advise3') Sản phẩm mới
+        .radiobtn
+          input#advise4(type='radio' data-value="#san-pham" name='tu_van_khac' value='tu_van_khac')
+          label(for='advise4') Sản phẩm nổi bật
+        .radiobtn
+          input#advise5(type='radio' data-value="#tab-mua_hang" name='tu_van_khac' value='tu_van_khac')
+          label(for='advise5') Sản phẩm giảm giá
+      .m-chat_bottom
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-tu_van_khac#tab-tu_van_khac
+      .m-chat_top
+        a#prevBtn(href="javascript:;" data-back="")
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
           </svg>
@@ -174,9 +204,10 @@ a(href='#').m-messenger
               g#surface1
                 path(style=' stroke:none;fill-rule:evenodd;fill:url(#radial0);' d='M 75 17.871094 C 41.992188 17.871094 16.40625 42.050781 16.40625 74.707031 C 16.40625 91.789062 23.40625 106.550781 34.808594 116.746094 C 35.765625 117.601562 36.34375 118.800781 36.382812 120.085938 L 36.699219 130.507812 C 36.804688 133.835938 40.238281 135.996094 43.28125 134.65625 L 54.910156 129.519531 C 55.894531 129.085938 57 129.003906 58.039062 129.289062 C 63.382812 130.761719 69.070312 131.542969 75 131.542969 C 108.007812 131.542969 133.59375 107.363281 133.59375 74.707031 C 133.59375 42.050781 108.007812 17.871094 75 17.871094 Z M 75 17.871094 ')
                 path(style=' stroke:none;fill-rule:evenodd;fill:rgb(100%,100%,100%);fill-opacity:1;' d='M 39.816406 91.328125 L 57.027344 64.019531 C 59.765625 59.675781 65.628906 58.59375 69.734375 61.675781 L 83.425781 71.945312 C 84.679688 72.886719 86.410156 72.878906 87.660156 71.929688 L 106.148438 57.898438 C 108.617188 56.027344 111.835938 58.980469 110.1875 61.601562 L 92.972656 88.910156 C 90.234375 93.253906 84.371094 94.335938 80.265625 91.253906 L 66.574219 80.984375 C 65.320312 80.042969 63.589844 80.050781 62.339844 81 L 43.851562 95.03125 C 41.382812 96.902344 38.164062 93.949219 39.816406 91.328125 Z M 39.816406 91.328125 ')
-    .tab.tab-mua_hang
+
+    .tab.tab-mua_hang#tab-mua_hang
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+        a#prevBtn(href="javascript:;" data-back="#tab-tu-van-khac")
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
           </svg>
@@ -196,10 +227,11 @@ a(href='#').m-messenger
           include product-item
           include product-item
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="toggleChat()") Kết Thúc
-    .tab.tab-kinh_ap_trong
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-kinh_ap_trong#tab-kinh_ap_trong
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+        a#prevBtn(href="javascript:;" data-back="#tab-tu-van")
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
           </svg>
@@ -212,19 +244,20 @@ a(href='#').m-messenger
         p.tab_ttl.center Bạn có tật khúc xạ mắt không ?
         img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
         .radiobtn
-          input#select_option_lens1(type='radio'  name='select_option_lens' value='can_kem_loan_thi' checked)
+          input#select_option_lens1(type='radio' data-value="#can-va-loan" name='select_option_lens' value='can_kem_loan_thi' checked)
           label(for='select_option_lens1') Cận thị kèm Loạn thị
         .radiobtn
-          input#select_option_lens2(type='radio'  name='select_option_lens' value='can_thi')
+          input#select_option_lens2(type='radio' data-value="#can-thi" name='select_option_lens' value='can_thi')
           label(for='select_option_lens2') Cận thị
         .radiobtn
-          input#select_option_lens3(type='radio'  name='select_option_lens' value='khong_can')
+          input#select_option_lens3(type='radio' data-value="#tab-size" name='select_option_lens' value='khong_can')
           label(for='select_option_lens3') Không cận
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="nextPrev('.tab-kinh_ap_trong')") TIẾP TỤC
-    .tab.tab-can_thi
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-can_thi#can-thi
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+        a#prevBtn(href="javascript:;" data-back="#tab-tu-van")
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
           </svg>
@@ -234,25 +267,62 @@ a(href='#').m-messenger
             <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
           </svg>
       .tab_inner
-        p.tab_ttl.center Bạn có tật khúc xạ mắt không ?
-        img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
+        p.tab_ttl.center Bạn cận bao nhiêu độ?
+        img(src=path+"assets/images/glass_frame.png" data-src=path+"assets/images/glass_frame.png" loading="lazy")
+        .radiobtn.is-hidden
+          input(type="radio" data-value="#tab-size" checked)
         .tab_inner_content
-          label(for='mat_trai') Mắt trái:
-          select#mat_trai(name='mat_trai')
-            option(value='01') 01
-            option(value='02') 02
-            option(value='03') 03
-            option(value='04') 04
-          label(for='mat_phai') Mắt Phải:
-          select#mat_phai(name='mat_phai')
-            option(value='01') 01
-            option(value='02') 02
-            option(value='03') 03
+          p.small-title Độ cận của mắt
+          .gr-input
+            .gr-input-item
+              label(for='mat_trai') Mắt trái:
+              input(name="mat-trai" type="text" value="1.0")
+            .gr-input-item
+              label(for='mat_phai') Mắt Phải:
+              input(name="mat-phai" type="text" value="1.0")
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="nextPrev('.tab-giam-do-can')") TIẾP TỤC
-    .tab.tab-giam-do-can
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-can_thi#can-va-loan
       .m-chat_top
-        button#prevBtn(type="button"  onclick="nextPrev(-1)")
+        a#prevBtn(href="javascript:;" data-back="#tab-tu-van")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p LENS KÍNH ÁP TRÒNG
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        p.tab_ttl.center Bạn cận bao nhiêu độ?
+        img(src=path+"assets/images/glass_frame.png" data-src=path+"assets/images/glass_frame.png" loading="lazy")
+        .radiobtn.is-hidden
+          input(type="radio" data-value="#tab-size" checked)
+        .tab_inner_content
+          p.small-title Độ cận của mắt
+          .gr-input
+            .gr-input-item
+              label(for='mat_trai') Mắt trái:
+              input(name="mat-trai" type="text" value="1.0")
+            .gr-input-item
+              label(for='mat_phai') Mắt Phải:
+              input(name="mat-phai" type="text" value="1.0")
+        .tab_inner_content
+          p.small-title Độ loạn của mắt
+          .gr-input
+            .gr-input-item
+              label(for='mat_trai_loan') Mắt trái:
+              input(name="mat_trai_loan" type="text" value="1.0")
+            .gr-input-item
+              label(for='mat_phai_loan') Mắt Phải:
+              input(name="mat_phai_loan" type="text" value="1.0")
+      .m-chat_bottom
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab.tab-giam-do-can#tab-giam-do-can
+      .m-chat_top
+        a#prevBtn(href="javascript:;" data-back="")
           <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
           </svg>
@@ -266,7 +336,82 @@ a(href='#').m-messenger
         img(src=path+"assets/images/chat_1.svg" data-src=path+"assets/images/chat_1.svg" loading="lazy")
 
       .m-chat_bottom
-          button#nextBtn(type="button"  onclick="nextPrev('.tab-can_thi')") TIẾP TỤC
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    //- .tab.tab-chi-so
+    //-   p.tab_ttl.center 2. Bạn cận bao nhiêu độ?
+    //-   label(for='mat_trai') Mắt trái:
+    //-   input(name="mat-trai" type="text" value="1.0")
+
+    //-   label(for='mat_phai') Mắt Phải:
+    //-   input(name="mat-phai" type="text" value="1.0")
+
+    .tab.tab-size#tab-size
+      .m-chat_top
+        a#prevBtn(href="javascript:;" data-back="#tab-kinh_ap_trong")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p LENS KÍNH ÁP TRÒNG
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        p.tab_ttl.center 3. Bạn thích tròng lens size  như thế nào?
+        img(src=path+"assets/images/eye_img.png" data-src=path+"assets/images/eye_img.png" loading="lazy")
+        .radiobtn
+          input#size(type='radio' data-value="#daily-use" oninput="this.className = ''"  name='size' value='Không cận' checked)
+          label(for='size') Size S (Không giãn)
+        .radiobtn
+          input#size2(type='radio' data-value="#daily-use" oninput="this.className = ''"  name='size' value='Cận và loạn thị')
+          label(for='size2') Size M (Giãn nhẹ)
+
+        .m-chat_bottom
+          a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab#daily-use
+      .m-chat_top
+        a#prevBtn(href="javascript:;" data-back="")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p LENS KÍNH ÁP TRÒNG
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        p.tab_ttl.center 4. Bạn sử dụng lens trong dịp nào?
+        img(src=path+"assets/images/chat_3.svg" data-src=path+"assets/images/chat_3.svg" loading="lazy")
+        .radiobtn
+          input#forday(type='radio' data-value="#san-pham" oninput="this.className = ''"  name='forday' value='Không cận' checked)
+          label(for='forday') Hàng ngày, đi làm, đi học
+        .radiobtn
+          input#forday2(type='radio' data-value="#san-pham" oninput="this.className = ''"  name='forday' value='Cận và loạn thị')
+          label(for='forday2') Đi chơi, bar, pub
+      .m-chat_bottom
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
+    .tab#san-pham
+      .m-chat_top
+        a#prevBtn(href="javascript:;" data-back="#tab-tu-van-khac")
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.6699 1.8699L9.89992 0.099903L-7.73358e-05 9.9999L9.89992 19.8999L11.6699 18.1299L3.53992 9.9999L11.6699 1.8699H11.6699Z" fill="white"/>
+          </svg>
+        p LENS KÍNH ÁP TRÒNG
+        .close(onclick="toggleChat()")
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5866 2.24525L15.8828 0.541504L9.12826 7.29609L2.37367 0.541504L0.669922 2.24525L7.42451 8.99984L0.669922 15.7544L2.37367 17.4582L9.12826 10.7036L15.8828 17.4582L17.5866 15.7544L10.832 8.99984L17.5866 2.24525Z" fill="white"/>
+          </svg>
+      .tab_inner
+        p.tab_ttl.center CARAS gửi bạn một số mẫu phù hợp với yêu cầu của bạn nhé
+        ul.sample-product
+          include product-item-sale
+          include product-item-sale
+      .m-chat_bottom
+        a.btn-next(href="javascript:;") TIẾP TỤC
+
 
     //- tab tư vấn
     //- .tab.advise

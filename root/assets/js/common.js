@@ -77,6 +77,11 @@ function toggleVariations(){
 function toggleChat(){
   let chat = document.getElementsByClassName("m-chat_inner");
   chat[0].classList.toggle("js-active");
+  if ($('.m-chat_inner').hasClass('js-active')) {
+    setTimeout(function(){
+      $('.overlay-welcome').fadeOut();
+    }, 3000);
+  }
 }
 ///
 jQuery.event.special.touchstart = {
