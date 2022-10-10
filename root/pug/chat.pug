@@ -15,20 +15,23 @@ block after_page
     script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
     script.
       $(document).ready(function() {
-
+        var tabArray = ['#tab-welcome'];
         $('.js-chatbot .tab').each(function(){
           var _this = $(this);
           _this.find('.btn-next').click(function(){
             var screenValue = _this.find('.radiobtn input:checked').data('value');
-            console.log(screenValue);
+            tabArray.push(screenValue);
             $('.js-chatbot .tab').hide();
             $('.js-chatbot .tab' + screenValue).show();
           })
           _this.find('#prevBtn').click(function(){
-            var screenBack = $(this).data('back');
-            console.log(screenBack);
+            var screenBack = tabArray[tabArray.length - 2];
+            tabArray.pop();
             $('.js-chatbot .tab').hide();
             $('.js-chatbot .tab' + screenBack).show();
+            if($.isEmptyObject(tabArray)) {
+              tabArray.push('#tab-welcome');
+            }
           })
         })
       });
