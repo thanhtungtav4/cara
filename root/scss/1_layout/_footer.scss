@@ -62,7 +62,7 @@
 		a{
 			text-decoration: none;
 			color: white;
-			transition: 0.3 ease-out;
+			transition: 0.3s ease-out;
 			&:hover{
 				font-weight: bold;
 			}
@@ -127,6 +127,151 @@
     	    height: auto;
     		width: 40px;
 			@include flex-center;
+		}
+	}
+
+
+	.m-support {
+		width: 100%;
+		text-align: left;
+		margin-bottom: 20px;
+		&_inner {
+			display: flex;
+
+		}
+		strong {
+			display: block;
+			margin-bottom: 5px;
+			font-size: 2rem;
+		}
+		&_list {
+			border-right: 1px solid #fff;
+			padding-right: 25px;
+
+			&:nth-child(even) {
+				border: none;
+				padding-left: 20px;
+			}
+			li {
+				margin: 5px 0;
+			}
+		}
+	}
+	.m-med {
+		strong {
+			display: block;
+			text-align: left;
+			width: 200px;
+		}
+		&_block {
+			display: flex;
+			align-items: center;
+			margin: 15px 0;
+			.l-icon {
+				display: flex;
+				align-items: center;
+				flex: 1;
+				li {
+					margin-right: 10px;
+				}
+				img {
+					height: 22px;
+				}
+			}
+		}
+	}
+	.m-info-company {
+		display: flex;
+		align-items: flex-start;
+		margin-top: 30px;
+		&_information {
+			width: 50%;
+			text-align: left;
+			strong {
+				display: block;
+				font-size: 1.5rem;
+				margin-bottom: 10px;
+			}
+			.txt {
+				font-size: .8em;
+			}
+		}
+		&_cert {
+			width: 50%;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin-top: 20px;
+			li {
+				width: 50%;
+				padding: 0 5px;
+			}
+		}
+	}
+	.m-copy-right {
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
+		.logo {
+			width: 100px;
+		}
+		.copyright {
+			font-size: .9rem;
+			margin-left: 15px;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		.m-support {
+			width: 35%;
+			&_inner {
+				display: flex;
+			}
+		}
+		.m-med {
+			width: 65%;
+    	display: flex;
+			strong {
+				width: auto;
+			}
+			&_block {
+				width: 33.333%;
+				flex-direction: column;
+				.l-icon {
+					img {
+						height: auto;
+					}
+				}
+
+			}
+		}
+		.m-info-company {
+			margin-top: 30px;
+			flex-direction: column;
+			&_information {
+				width: 100%;
+				strong {
+					font-size: 2rem;
+				}
+				.txt {
+					font-size: 1.5rem;
+				}
+			}
+			&_cert {
+				width: 100%;
+				flex-wrap: nowrap;
+				li {
+					width: auto;
+					padding: 0 5px;
+				}
+			}
+		}
+		.m-copy-right {
+			.logo {
+				width: 150px;
+			}
+			.copyright {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }

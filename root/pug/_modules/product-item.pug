@@ -7,9 +7,21 @@ li
             img.lazyload(src=path+"assets/images/product_item.jpg" data-src=path+"assets/images/product_item.jpg" alt='Logo' loading="lazy" width="323" height="323")
     .m-product__content
         .m-product__content-top
-            a(href)
-                h3.strong XANIA BROWN
-            p 400.000VND
+            .inner
+              a(href)
+                  h3.strong BROWN
+              ul.color
+                li
+                  span.is-brown
+                li
+                  span.is-gray
+                li
+                  span.is-choco
+            a.favorite-btn(href="#")
+              img(src=path+"assets/images/heart.png", alt="")
+
         .m-product__content-bottom
-            p 8h/ngày | 3 tháng
+            .left
+              p 14h - 3 tháng
+              p 400.000VND
             include btn-cart
