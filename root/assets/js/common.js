@@ -157,6 +157,13 @@ function nextPrev(Tabcurrent){
   }
 }
 
+$(document).ready(function(){
+  $('.c-menu_dropdown').click(function(){
+    $(this).stop().toggleClass('active');
+    $(this).find('.c-menu_sub').stop().slideToggle();
+  })
+})
+
 // function nextPrev(n) {
 //   // This function will figure out which tab to display
 //   var x = document.getElementsByClassName("tab");

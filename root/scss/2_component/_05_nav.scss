@@ -8,7 +8,13 @@
 		padding: 2.5rem 0 3rem;
 		transform: translateX(-100%);
 		visibility: hidden;
+		@include sp {
+			visibility: visible;
+			transform: none;
+			padding-top: 20px !important;
+		}
 		&inner{
+			width: 100%;
 			.l-container{
 				@include flex-jbetween;
 				padding: 0;
@@ -29,15 +35,46 @@
 						width: calc(20% - 20px);
     					margin: 0 10px;
 					}
+					.gr-menu {
+						width: calc(20% - 20px);
+						margin: 0 10px;
+						dl {
+							width: 100%;
+						}
+						@include sp {
+							width: 40%;
+							margin: 0;
+							display: flex;
+							flex-direction: column;
+							&:nth-child(odd) {
+								width: 60%;
+								padding-left: 30px;
+								border-left: 1px solid #cccc;
+							}
+							dl {
+								&:last-child {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
 				}
 			}
 			background-color: #F5F5F5;
 			padding: 2rem 0 5rem;
+			@include sp {
+				background: #000;
+			}
 			dl{
 				font-size: 1.4rem;
+				@include sp {
+				}
 				dt{
 					font-weight: 700;
 					margin-bottom: 1rem;
+					@include sp {
+						margin-bottom: .5rem;
+					}
 				}
 				dd{
 					a{
@@ -52,11 +89,35 @@
 		}
 	}
 	&_dropdown{
+		@include sp {
+			position: relative;
+			&::before {
+				position: absolute;
+				content: '';
+				background: #fff url('../images/ico_arrow.png') no-repeat center / 14px;
+				width: 26px;
+				height: 26px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				right: 17px;
+				top: 10px;
+				transition: .3s ease;
+			}
+			&.active {
+				&::before {
+					transform: rotate(90deg);
+				}
+			}
+		}
 		&:hover{
-			.c-menu_sub{
-				visibility: visible;
-				transform: translateX(0);
-				z-index: 1;
+			@media screen and (min-width: 768px) {
+				.c-menu_sub{
+					visibility: visible;
+					transform: translateX(0);
+					z-index: 1;
+				}
 			}
 		}
 	}

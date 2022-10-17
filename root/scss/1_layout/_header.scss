@@ -9,6 +9,7 @@
 	background-color: white;
 	@include sp{
 		padding: 15px 0 0;
+		background-color: #000;
 	}
 	&_top{
 		text-align: center;
@@ -48,6 +49,14 @@
 				color: #2B2929;
 				&:hover{
 					color: #EB6A6A;
+				}
+				@include sp{
+					color: #f5f5f5;
+					> small {
+						font-size: 12px;
+						margin-left: 5px;
+						color: #ccc;
+					}
 				}
 			}
 		}
@@ -277,20 +286,40 @@
 				padding: 0;
 				.l-container {
 					flex-direction: column;
+					@include sp {
+						flex-direction: unset;
+						flex-wrap: wrap;
+					}
 					dl{
 						width: calc(100% - 20px);
+						@include sp {
+							margin: 0 0 20px;
+						}
 					}
 				}
 			}
+
 		}
 		.c-menu_dropdown{
-			&:hover{
-				.c-menu_sub{
-					display: flex;
-					visibility: visible;
-    			transform: translateX(0);
+			@include sp {
+				.c-menu_sub {
+					display: none;
 				}
 			}
+			@media screen and (min-width: 768px) {
+				&:hover{
+					.c-menu_sub{
+						display: flex;
+						visibility: visible;
+						transform: translateX(0);
+						@include sp {
+							margin-top: 20px;
+
+						}
+					}
+				}
+			}
+
 		}
 		.c-header_menu{
 			position: fixed;
@@ -305,6 +334,10 @@
 			flex-wrap: nowrap;
 			li{
 				width: 100%;
+			}
+			@include sp {
+				background-color: #000;
+				color: #f5f5f5;
 			}
 		}
 		.c-menu__logo{
