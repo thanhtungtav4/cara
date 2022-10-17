@@ -277,6 +277,11 @@
 			display: none;
 		}
 	}
+	@include sp {
+		.c-menu_sub {
+			display: none;
+		}
+	}
 	&.js-active{
 		.c-menu_sub{
 			position: inherit;

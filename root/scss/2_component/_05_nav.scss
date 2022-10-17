@@ -120,6 +120,14 @@
 				}
 			}
 		}
+		&.lang,
+		&.user,
+		&.search,
+		&.cart {
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 }
