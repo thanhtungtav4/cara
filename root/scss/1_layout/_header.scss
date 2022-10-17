@@ -304,6 +304,69 @@
 			@include sp {
 				.c-menu_sub {
 					display: none;
+					.types {
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						justify-content: space-between;
+						dt {
+							width: 100%;
+						}
+						dd {
+							width: 50%;
+						}
+					}
+					.color {
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						justify-content: flex-start;
+						dt {
+							width: 100%;
+						}
+						dd {
+							margin-right: 10px;
+							a {
+								padding: 5px;
+								border-radius: 20px;
+								background: #C6A66F;
+								min-width: 73px;
+								display: inline-block;
+								text-align: center;
+								box-sizing: border-box;
+								border: 1px solid #C6A66F;
+								&.is-choco {
+									background: #745d52;
+									border-color: #745d52;
+								}
+								&.is-gray {
+									background: #737373;
+									border-color: #737373;
+								}
+								&.is-clear {
+									background: transparent;
+									border: 1px solid #fff;
+								}
+							}
+						}
+					}
+					dl.time-use dd a {
+						display: flex;
+						align-items: center;
+						padding-right: 10px;
+					}
+
+					dl.time-use dd a small {
+						font-size: 14px;
+						flex-basis: 30px;
+						margin-left: 0;
+					}
+
+					dl.time-use dd a img {
+						width: 85px;
+						height: auto;
+						margin-left: 5px;
+					}
 				}
 			}
 			@media screen and (min-width: 768px) {
