@@ -28,6 +28,9 @@
 			border-radius: 5px;
 			display: inline-block;
 			bottom: 2rem;
+			@include sp{
+				right: 1rem;
+			}
 
 			form {
 				@include flex-center;
