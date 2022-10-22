@@ -81,6 +81,7 @@
     @include flex;
     flex-direction: column;
     text-align: right;
+    align-items: flex-start;
     @include sp{
         text-align: left;
     }
