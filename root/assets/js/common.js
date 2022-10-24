@@ -222,3 +222,36 @@ $(document).ready(function(){
 //   console.log($(this).serialize());
 //   return false;
 // });
+//
+function quickview($id){
+  let popup = document.getElementsByClassName("m-popup");
+  popup[0].classList.toggle("js-active");
+}
+$('body').click(function (event)
+{
+   if(!$(event.target).closest('#popup').length && !$(event.target).is('#popup')) {
+     //$(".m-popup").hide();
+     console.log('1212212');
+   }
+});
+// window.onload = function(){
+//   let is_active = document.getElementsByClassName('m-popup js-active');
+//   let is_element = document.getElementsByClassName('m-popup');
+//   document.onclick = function(e){
+//     if(e.target.className !== 'm-popup js-active'){
+//       quickview();
+//     }
+//   }
+// }
+function quickview($id){
+  document.getElementById('overlay').classList.add('js-visible');
+  document.getElementById('modal').classList.add('js-visible');
+}
+document.getElementById('close-btn').addEventListener('click', function() {
+  document.getElementById('overlay').classList.remove('js-visible');
+  document.getElementById('modal').classList.remove('js-visible');
+});
+document.getElementById('overlay').addEventListener('click', function() {
+  document.getElementById('overlay').classList.remove('js-visible');
+  document.getElementById('modal').classList.remove('js-visible');
+});
