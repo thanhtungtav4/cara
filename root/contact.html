@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preload" as="style" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" type="text/css" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" type="text/css" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     </noscript>
@@ -30,6 +32,71 @@
             <p>brown</p>
           </li>
         </ol>
+      </div>
+      <div class="modal_content"> 
+        <table>
+          <tbody>
+            <tr>
+              <th>HSD: </th>
+              <td> 3 tháng</td>
+            </tr>
+            <tr>
+              <th>Đeo:</th>
+              <td>14h/Ngày</td>
+            </tr>
+            <tr>
+              <th>Size:</th>
+              <td>S</td>
+            </tr>
+            <tr>
+              <th>DIA:</th>
+              <td>13.6mm </td>
+            </tr>
+            <tr>
+              <th>GDIA:</th>
+              <td>13.6mm               </td>
+            </tr>
+            <tr>
+              <th>Độ Cận:</th>
+              <td>13.6mm    </td>
+            </tr>
+            <tr>
+              <th>Phù hợp:</th>
+              <td> 
+                <table>
+                  <tbody>     
+                    <tr>
+                      <td>Phù hợp:</td>
+                      <td>Phù hợp:</td>
+                      <td>Phù hợp:</td>
+                    </tr>
+                    <tr>
+                      <td>Phù hợp:</td>
+                      <td>Phù hợp:</td>
+                      <td>Phù hợp:</td>
+                    </tr>
+                    <tr>
+                      <td>Phù hợp:</td>
+                      <td>Phù hợp:</td>
+                      <td>Phù hợp:                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal_bottom"> 
+        <button class="modal-close-btn" id="close-btn">
+          <svg fill="#2B2929" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="40px" height="40px">
+            <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"></path>
+          </svg>
+        </button>
+        <div class="modal_cart"> 
+          <p class="price"> <span class="woocommerce-Price-amount amount">
+              <bdi>570,000.000<span class="woocommerce-Price-currencySymbol">VNĐ/cặp</span></bdi></span></p><a class="btn" href="#" tabindex="0"><img class="lazyload" src="assets/images/basket__icon.svg" data-src="assets/images/basket__icon.svg" alt="add to cart" loading="lazy" width="30" height="30"></a>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -384,21 +451,17 @@
         </div>
         <div class="contact">
           <div class="l-container">
-            <div class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7839.040405691896!2d106.68206902644715!3d10.771412409120655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fc2ce24c1f7%3A0x223c99e3370fea8!2zQuG7h25oIHZp4buHbiBCw6xuaCBEw6Ju!5e0!3m2!1sen!2s!4v1657273312849!5m2!1sen!2s" width="100%" height="888" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
             <div class="form">
-              <div class="form_inner">
-                <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
-                <input type="text" placeholder="Tên của bạn *">
-                <input type="mail" placeholder="Email của bạn *">
-                <input type="phone" placeholder="Số điện thoại *">
-                <input type="text" placeholder="Tiêu đề">
-                <textarea name="" cols="30" rows="25" placeholder="Nội dung *"> </textarea>
-                <input class="btn_red" type="submit" value="GỬI">
+              <div class="form_inner"><h3 >HỆ THỐNG CỬA HÀNG CARAS</h3>  
+<table class="table table-bordered">
+<tbody id="t_points"></tbody>
+</table>
               </div>
             </div>
+            <div class="map" id="map"></div>
           </div>
+        </div>
+        <div class="l-container">   
           <div class="c-info"> 
             <div class="list">
               <h4>KÍNH Y TẾ CHUYÊN DỤNG</h4>
@@ -1105,6 +1168,8 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/common.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script type="text/javascript" src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
     <script>
       $(document).ready(function(){
         $('.slick-sure').not('.slick-initialized').slick({
@@ -1132,6 +1197,52 @@
           ]
         });
       });
+      var map = L.map('map').setView([10.766932, 106.679240], 14);
+      var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+      
+      function addRowTable(code, coords){
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.textContent = code;
+        tr.appendChild(td);
+        tr.onclick = function(){map.flyTo(coords, 17);};
+        document.getElementById("t_points").appendChild(tr);
+      }
+      var buffers = [];
+      function addMarker(code,lat,lng){
+        var p = L.marker([lat,lng]);
+        p.title = code;
+        p.alt = code;
+        p.bindPopup(code);
+        p.addTo(map);
+        addRowTable(code, [lat,lng]);
+        var c = L.circle([lat,lng], {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+          radius: 0
+        }).addTo(map);
+        buffers.push(c);
+      }
+      
+      
+      $(document).ready(function (){
+        var points = [["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],
+                      ["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],
+                      ["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],
+                      ["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],];
+        for (var i=0; i < points.length; i++){
+          addMarker(points[i][0],points[i][1],points[i][2]);
+        }
+      });
+      
+      L.control.scale({maxWidth:240, metric:true, position: 'bottomleft'}).addTo(map);
+      
+      L.control.polylineMeasure({position:'topleft', imperial:false, clearMeasurementsOnStop: false, showMeasurementsClearControl: true}).addTo(map);
+      
     </script>
   </body>
 </html>

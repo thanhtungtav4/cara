@@ -9,10 +9,14 @@ block vars
   -ispage       = 'contact'
 block before_page
     link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+    link(rel="preload" as="style" type='text/css' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' onload="this.onload=null;this.rel='stylesheet'")
+    link(rel="preload" as="style" type='text/css' href='https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css' onload="this.onload=null;this.rel='stylesheet'")
     noscript
       link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 block after_page
     script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script(type='text/javascript' src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js')
+    script(type='text/javascript' src='https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js')
     script.
       $(document).ready(function(){
         $('.slick-sure').not('.slick-initialized').slick({
@@ -40,22 +44,66 @@ block after_page
           ]
         });
       });
+      var map = L.map('map').setView([10.766932, 106.679240], 14);
+      var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      function addRowTable(code, coords){
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+        td.textContent = code;
+        tr.appendChild(td);
+        tr.onclick = function(){map.flyTo(coords, 17);};
+        document.getElementById("t_points").appendChild(tr);
+      }
+      var buffers = [];
+      function addMarker(code,lat,lng){
+        var p = L.marker([lat,lng]);
+        p.title = code;
+        p.alt = code;
+        p.bindPopup(code);
+        p.addTo(map);
+        addRowTable(code, [lat,lng]);
+        var c = L.circle([lat,lng], {
+          color: 'red',
+          fillColor: '#f03',
+          fillOpacity: 0.5,
+          radius: 0
+        }).addTo(map);
+        buffers.push(c);
+      }
+
+
+      $(document).ready(function (){
+        var points = [["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],
+                      ["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],
+                      ["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],
+                      ["619 Nguyễn Đình Chiểu, Phường 2, Quận 3, TP. Hồ Chí Minh",10.766932, 106.679240],];
+        for (var i=0; i < points.length; i++){
+          addMarker(points[i][0],points[i][1],points[i][2]);
+        }
+      });
+
+      L.control.scale({maxWidth:240, metric:true, position: 'bottomleft'}).addTo(map);
+
+      L.control.polylineMeasure({position:'topleft', imperial:false, clearMeasurementsOnStop: false, showMeasurementsClearControl: true}).addTo(map);
+
 block container
   .l-container
     include _modules/sure_contact
   .contact
     .l-container
-      .map
-        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7839.040405691896!2d106.68206902644715!3d10.771412409120655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fc2ce24c1f7%3A0x223c99e3370fea8!2zQuG7h25oIHZp4buHbiBCw6xuaCBEw6Ju!5e0!3m2!1sen!2s!4v1657273312849!5m2!1sen!2s' width='100%' height='888' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade')
       .form
         .form_inner
-          h4 LIÊN HỆ VỚI CHÚNG TÔI
-          input(type="text" placeholder="Tên của bạn *")
-          input(type="mail" placeholder="Email của bạn *")
-          input(type="phone" placeholder="Số điện thoại *")
-          input(type="text" placeholder="Tiêu đề")
-          textarea(name="", cols="30", rows="25" placeholder="Nội dung *") 
-          input.btn_red(type="submit" value="GỬI")
+          <h3 >HỆ THỐNG CỬA HÀNG CARAS</h3>  
+          <table class="table table-bordered">
+            <tbody id="t_points"></tbody>
+          </table>
+      .map#map
+        
+  .l-container    
     include _modules/info        
 
 

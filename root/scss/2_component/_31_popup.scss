@@ -10,19 +10,19 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.3);
+  z-index: 88;
 }
 .modal {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
   position: fixed;
-  top: 25%;
-  bottom: 20%;
+  top: 22%;
   left: 0;
   right: 0;
   max-width: 100%;
   width: 500px;
-  height: 300px;
+  height: auto;
   margin: 0 auto;
   background: #fff;
   border-radius: 4px;
@@ -34,11 +34,20 @@
   &_top{
     @include flex;
     justify-content: space-between;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
     align-items: center;
     h3{
       font-weight: 700;
       font-size: large;
+      color: #2B2929;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      width: 200px;
+      @include sp{
+        width: 160px;
+      }
     }
   }
   &_img {
@@ -62,14 +71,59 @@
       }
     }
   }
+  &_bottom{
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    .btn{
+      width: 80px;
+      height: 25px;
+      background-color: #2B2929;
+      padding: 5px 10px;
+      border-radius: 10px;
+      margin-left: 10px;
+      img{
+        height: 25px;
+      }
+    }
+  }
+  &_cart{
+    @include flex;
+    .woocommerce-Price-amount bdi{
+      font-weight: 700;
+    }
+    span.woocommerce-Price-currencySymbol{
+      display: block;
+      text-align: end;
+      font-weight: 500;
+    }
+  }
+  &_content{
+    table{
+      width: 100%;
+      padding: 10px;
+      tr{
+        th{
+          text-align: start;
+          width: 90px;
+        }
+        td{
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+    }
+  }
+
 }
 .js-visible {
   opacity: 1;
   pointer-events: auto;
 }
 .modal-close-btn {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 20px;
+  border: 0;
+  background: transparent;
 }

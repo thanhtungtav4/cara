@@ -174,7 +174,7 @@
         &-bottom{
             @include flex-jbetween;
             align-items: flex-end;
-            margin-top: 1rem;
+            margin: 1rem 0;
             p{
                 font-size: 1.2rem;
             }
