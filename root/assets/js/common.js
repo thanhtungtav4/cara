@@ -234,15 +234,7 @@ $('body').click(function (event)
      console.log('1212212');
    }
 });
-// window.onload = function(){
-//   let is_active = document.getElementsByClassName('m-popup js-active');
-//   let is_element = document.getElementsByClassName('m-popup');
-//   document.onclick = function(e){
-//     if(e.target.className !== 'm-popup js-active'){
-//       quickview();
-//     }
-//   }
-// }
+
 function quickview($id){
   document.getElementById('overlay').classList.add('js-visible');
   document.getElementById('modal').classList.add('js-visible');
