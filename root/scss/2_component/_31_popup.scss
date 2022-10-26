@@ -30,6 +30,11 @@
   z-index: 99;
   &_inner{
     @include flex;
+    justify-content: center;
+    svg{
+      margin: 6rem auto;
+      text-align: center;
+    }
   }
   &_top{
     @include flex;
