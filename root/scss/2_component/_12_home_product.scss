@@ -168,6 +168,21 @@
                         &.is-choco {
                             background: #745D52;
                         }
+                        &.is-gold {
+                            background: #FFD700;
+                        }
+                        &.is-green {
+                            background: green;
+                        }
+                        &.is-violet {
+                            background: violet;
+                        }
+                        &.is-blue{
+                            background: rgba(41, 41, 231, 0.762);
+                        }
+                        &.is-black{
+                            background: #2B2929
+                        }
                     }
                 }
             }
