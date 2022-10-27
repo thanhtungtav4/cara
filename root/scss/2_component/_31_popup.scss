@@ -49,18 +49,12 @@
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
-      width: 200px;
-      @include sp{
-        width: 160px;
-      }
+      width: 100px;
     }
   }
   &_img {
     @include flex;
-    width: calc(100% - 200px);
-    @include sp{
-      width: calc(100% - 160px);
-    }
+    width: calc(100% - 100px);
     justify-content: space-around;
     gap: 5px;
     img{
