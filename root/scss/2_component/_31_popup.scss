@@ -70,6 +70,30 @@
       align-items: center;
     }
     li{
+      &.is-brown {
+          color: #c6a66f;
+      }
+      &.is-gray {
+          color: #737373;
+      }
+      &.is-choco {
+          color: #745D52;
+      }
+      &.is-gold {
+          color: #FFD700;
+      }
+      &.is-green {
+          color: green;
+      }
+      &.is-violet {
+          color: violet;
+      }
+      &.is-blue{
+          color: rgba(41, 41, 231, 0.762);
+      }
+      &.is-black{
+          color: #2B2929
+      }
       p{
         font-weight: 600;
         font-size: 1.5rem;
@@ -109,11 +133,11 @@
   &_content{
     table{
       width: 100%;
-      padding: 10px;
       tr{
         th{
           text-align: start;
           width: 90px;
+          padding: 10px;
         }
         td{
           line-height: 1.5;
