@@ -193,3 +193,8 @@ form label {
 		display: block;
 	}
 }
+.is_pointer{
+	&:hover{
+		cursor: pointer;
+	}
+}
