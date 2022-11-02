@@ -2,14 +2,15 @@
     margin-bottom: 6rem;
     &_top{
         @include flex-jbetween;
+        align-items: center;
         > h4 {
             @include ttl4;
-            @include sp{
-                margin-bottom: 1rem;;
-            }
+            font-size: 2.5rem;
+            margin-bottom: 0;
         }
         @include sp{
             flex-direction: column;
+            align-items: flex-start
         }
     }
     &__inner{
