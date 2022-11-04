@@ -15,6 +15,21 @@ window.onscroll = function(e) {
       console.log(121);
   }
 };
+// Scroll to specific values
+// scrollTo is the same
+window.scroll({
+  top: 2500,
+  left: 0,
+  behavior: 'smooth'
+});
+
+// Scroll certain amounts from current position
+window.scrollBy({
+  top: 100, // could be negative value
+  left: 0,
+  behavior: 'smooth'
+});
+
 function toggleMenu(){
     let menu = document.getElementsByClassName("c-header");
     menu[0].classList.toggle("js-active");
@@ -39,11 +54,10 @@ function toggleMenu(){
     '</svg>'+
     '              </li>';
     let html_appent= '<li class="c-menu c-menu__logo"><a href="/"><picture>'+
-    '                  <source srcset="/wp-content/themes/storefront-child/assets/images/caras_logo.webp" type="image/webp"><img src="/wp-content/themes/storefront-child/assets/images/caras_logo.png" data-src="/wp-content/themes/storefront-child/assets/images/caras_logo.png" alt="logo caras">'+
+    '                  <source srcset="/wp-content/themes/storefront-child/assets/images/caras_logo_white.webp" type="image/webp"><img src="/wp-content/themes/storefront-child/assets/images/caras_logo_white.png" data-src="/wp-content/themes/storefront-child/assets/images/caras_logo_white.png" alt="logo caras">'+
     '                </picture></a>'+
     '              </li>';
-    let html_appentLang = '<li class="c-menu c-menu__logo"><a href="#">Tiếng Việt</a>'+
-    '              </li>';
+    let html_appentLang = '';
     let is_true =  document.getElementsByClassName("c-menu__logo")[0];
     if(is_true == undefined){
 
@@ -119,44 +133,6 @@ $(window).scroll(function(){
   positionBf = positionAf;
 });
 
-///
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
- function showTab(n) {
-//   // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-//   // console.log(x[n]);
-
-//   //... and fix the Previous/Next buttons:
-//   // if (n == 0) {
-//   //   document.getElementById("prevBtn").style.display = "none";
-//   // } else {
-//   //   document.getElementById("prevBtn").style.display = "inline";
-//   // }
-//   // if (n == (x.length - 1)) {
-//   //   document.getElementById("nextBtn").innerHTML = "Submit";
-//   // } else {
-//   //   document.getElementById("nextBtn").innerHTML = "Next";
-//   // }
-//   //... and run a function that will display the correct step indicator:
-//   //fixStepIndicator(n)
- }
-function nextPrev(Tabcurrent){
-  let inputCurrent = $(Tabcurrent).find("input:checked").val();
-  console.log('tab-'+ inputCurrent);
-  if(inputCurrent == undefined){
-    //hide current tab
-    $(Tabcurrent).css({"display": "none"});
-    $('.tab-giam-do-can').css({"display": "block"});
-   }
-  else{
-    $(Tabcurrent).css({"display": "none"});
-    $('.tab-'+ inputCurrent).css({"display": "block"});
-  }
-}
-
 $(document).ready(function(){
   $('.c-menu_dropdown').click(function(){
     $(this).stop().toggleClass('active');
@@ -164,86 +140,81 @@ $(document).ready(function(){
   })
 })
 
-// function nextPrev(n) {
-//   // This function will figure out which tab to display
-//   var x = document.getElementsByClassName("tab");
-//   //console.log(x);
-//   // Exit the function if any field in the current tab is invalid:
-//   if (n == 1 && !validateForm()) return false;
-//   controlShow();
-//   // Hide the current tab:
-//   x[currentTab].style.display = "none";
-//   // Increase or decrease the current tab by 1:
-//   currentTab = currentTab + n;
-//   // if you have reached the end of the form...
-//   if (currentTab >= x.length) {
-//     // ... the form gets submitted:
-//     document.getElementById("regForm").submit();
-//     return false;
-//   }
-//   // Otherwise, display the correct tab:
-//   showTab(currentTab);
-// }
-
-// function validateForm() {
-//   // This function deals with validation of the form fields
-//   var x, y, i, valid = true;
-//   x = document.getElementsByClassName("tab");
-//   y = x[currentTab].getElementsByTagName("input");
-//   // A loop that checks every input field in the current tab:
-//   for (i = 0; i < y.length; i++) {
-//     // If a field is empty...
-//     if (y[i].value == "") {
-//       // add an "invalid" class to the field:
-//       y[i].className += " invalid";
-//       // and set the current valid status to false
-//       valid = false;
-//     }
-//   }
-//   // If the valid status is true, mark the step as finished and valid:
-//   if (valid) {
-//     //document.getElementsByClassName("step")[currentTab].className += " finish";
-//   }
-//   return valid; // return the valid status
-// }
-// function controlShow(){
-
-//   const dataTab = $("input[type=radio]:checked");
-//   console.log(dataTab.data('tab'));
-//   // var is_Tab = $(".tab");
-//   // is_Tab.forEach(function(tab) {
-//     // console.log(tab);
-//     // debugger;
-//   // })
-//   // const is_check = is_Tab[currentTab].getElementsByTagName("input");
-//   // console.log(is_check);
-// }
-// $('#regForm').submit(function() {
-//   console.log($(this).serialize());
-//   return false;
-// });
-//
-function quickview($id){
-  let popup = document.getElementsByClassName("m-popup");
-  popup[0].classList.toggle("js-active");
-}
-$('body').click(function (event)
-{
-   if(!$(event.target).closest('#popup').length && !$(event.target).is('#popup')) {
-     //$(".m-popup").hide();
-     console.log('1212212');
-   }
+$(document).ready(function() {
+  var tabArray = ['#tab-welcome'];
+  var tabData = '';
+  $('.js-chatbot .tab').each(function(){
+    var _this = $(this);
+    _this.find('.btn-next').click(function(){
+      var screenValue = _this.find('.radiobtn input:checked').data('value');
+      var TabValue = _this.find('.radiobtn input:checked').data('options');
+      if(typeof TabValue =='number'){
+        tabData += TabValue;
+      }
+      tabArray.push(screenValue);
+      console.log(tabData);
+      $('.js-chatbot .tab').hide();
+      if(tabData == 274  || tabData == 275 || tabData == 276 || tabData == 284 || tabData == 285
+        || tabData == 286 || tabData == 374 || tabData == 375 || tabData == 376 || tabData == 384 || tabData == 385 || tabData == 386 ){
+          console.log('tab-'+ tabData);
+          $('.js-chatbot .tab-' + tabData).show();
+      }
+      else{
+        $('.js-chatbot .tab' + screenValue).show();
+      }
+    });
+    _this.find('#prevBtn').click(function(){
+      var screenBack = tabArray[tabArray.length - 2];
+      tabArray.pop();
+      $('.js-chatbot .tab').hide();
+      $('.js-chatbot .tab' + screenBack).show();
+      if($.isEmptyObject(tabArray)) {
+        tabArray.push('#tab-welcome');
+      }
+    });
 });
-
+$(document).ready(function() {
+  var dataMattrai = [];
+  var dataMatphai = [];
+  $('#mat-trai').on("change keyup input",function() {
+    dataMattrai = $(this).val();
+    console.log(dataMattrai);
+  });
+  $("#mat-phai").on("change paste keyup", function() {
+    dataMatphai = $(this).val();
+    console.log(dataMatphai);
+  });
+  })
+});
+// quick view
 function quickview($id){
+  currentID = $id;
+  console.log($id);
+  $.ajax({
+    type: 'POST',
+    url: '/wp-admin/admin-ajax.php',
+    dataType: 'html',
+    data: {
+      action: 'productData',
+      id: currentID,
+    },
+    success: function (res) {
+     $('.modal').empty().append(res);
+    }
+  });
   document.getElementById('overlay').classList.add('js-visible');
   document.getElementById('modal').classList.add('js-visible');
 }
-document.getElementById('close-btn').addEventListener('click', function() {
+function closeQuickView(){
   document.getElementById('overlay').classList.remove('js-visible');
   document.getElementById('modal').classList.remove('js-visible');
-});
-document.getElementById('overlay').addEventListener('click', function() {
-  document.getElementById('overlay').classList.remove('js-visible');
-  document.getElementById('modal').classList.remove('js-visible');
-});
+  $('.modal').empty().append('is update');
+}
+
+window.onload=function(event){
+  document.getElementById('overlay').addEventListener('click', function() {
+    document.getElementById('overlay').classList.remove('js-visible');
+    document.getElementById('modal').classList.remove('js-visible');
+    $('.modal').empty().append('is update');
+  });
+};
