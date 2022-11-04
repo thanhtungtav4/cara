@@ -8,16 +8,19 @@
 	position: relative;
 	background-color: white;
 	@include sp{
-		padding: 15px 0 0;
+		padding: 0 0 0 7px;
 		background-color: #000;
 	}
 	&_top{
 		text-align: center;
 		padding-bottom: 17px;
+		@include sp{
+			padding-bottom: 5px;
+		}
 		p{
-			font-size: 2rem;
+			font-size: 1.7rem;
 			@include sp{
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 				color: white;
 			}
 			line-height: 1.2;
@@ -68,6 +71,7 @@
 		@include sp{
 			width: 100%;
 			justify-content: space-around;
+			background-color: black;
 		}
 		> li{
 			padding: 10px;
@@ -84,6 +88,9 @@
 			}
 			svg{
 				fill: #2B2929;
+				@include sp{
+					fill: #ccc;
+				}
 			}
 			.icon_inner{
 				position: relative;
@@ -262,6 +269,18 @@
 						height: 20px;
 					}
 				}
+			}
+			&.logo{
+				img{
+					width: 110px;
+					height: auto;
+					display: inline-block;
+					align-items: center;
+				}
+			}
+			&.navbar{
+				display: inline-flex;
+				align-items: center;
 			}
 		}
 	}
