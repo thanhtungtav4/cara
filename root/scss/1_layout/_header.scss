@@ -114,6 +114,9 @@
 				}
 			}
 			&.cart{
+				@include sp{
+					margin-left: auto;
+				}
 				.icon_inner{
 					span{
 						position: absolute;
@@ -203,6 +206,9 @@
 				}
 			}
 			&.user{
+				@include sp{
+					display: none;
+				}
 				.c-menu_sub{
 					width: 170px;
 					a{
