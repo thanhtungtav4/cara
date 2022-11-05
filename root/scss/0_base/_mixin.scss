@@ -45,6 +45,11 @@
 		@content;
 	}
 }
+@mixin smailsp {
+	@media screen and (max-width: #{$breakpoint2}) {
+		@content;
+	}
+}
 
 /*------------------------------------------------------------
 	Flex Box

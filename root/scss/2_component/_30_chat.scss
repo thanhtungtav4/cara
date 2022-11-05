@@ -1,10 +1,15 @@
 .m-chat {
 	position: fixed;
-	right: 3rem;
-	bottom: 3rem;
-	height: 70px;
-	width: 70px;
-
+	right: 0;
+	bottom: 5rem;
+	border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+	padding: 15px 10px;
+	background-color: #00000096;
+	z-index: 2;
+	@include sp{
+		padding: 15px 4px;
+	}
 	&_inner {
 		width: 360px;
 		height: auto;
@@ -168,7 +173,39 @@
 			margin: 1rem 0;
 		}
 	}
-
+	&__item{
+		margin-bottom: 1rem;
+		&.chat{
+			img{
+				border-radius: 50%;
+				padding: 4px 9px;
+				border-radius: 50%;
+				width: 50px;
+				background: black;
+				@include sp{
+					padding: 5px 8px;
+    				width: 35px;
+				}
+			}
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		&.messenger{
+			img{
+				background: #d1a400;
+				padding: 9px;
+				border-radius: 50%;
+				width: 50px;
+				@include sp{
+    				width: 35px;
+				}
+			}
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
 }
 .overlay-welcome {
 	position: absolute;
