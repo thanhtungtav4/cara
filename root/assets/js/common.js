@@ -189,7 +189,6 @@ $(document).ready(function() {
 // quick view
 function quickview($id){
   currentID = $id;
-  console.log($id);
   $.ajax({
     type: 'POST',
     url: '/wp-admin/admin-ajax.php',
