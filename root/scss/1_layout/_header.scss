@@ -94,6 +94,7 @@
 			}
 			.icon_inner{
 				position: relative;
+				display: inline-block;
 			}
 			&:hover{
 				svg{
@@ -114,9 +115,6 @@
 				}
 			}
 			&.cart{
-				@include sp{
-					margin-left: auto;
-				}
 				.icon_inner{
 					span{
 						position: absolute;
@@ -131,6 +129,11 @@
 						font-weight: 400;
 						line-height: 18px;
 					}
+				}
+			}
+			&.search{
+				@include sp{
+					margin-left: auto;
 				}
 			}
 			.c-menu_sub{
