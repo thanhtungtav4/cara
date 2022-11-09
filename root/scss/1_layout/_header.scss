@@ -89,7 +89,10 @@
 			svg{
 				fill: #2B2929;
 				@include sp{
-					fill: #ccc;
+					fill: #737373;
+					&:hover{
+						fill:#EB6A6A;
+					}
 				}
 			}
 			.icon_inner{
@@ -99,19 +102,6 @@
 			&:hover{
 				svg{
 					fill: #EB6A6A;
-				}
-				.icon_inner{
-					&::before{
-						content: '';
-						width: 0;
-						height: 0;
-						border-left: 15px solid transparent;
-						border-right: 15px solid transparent;
-						border-bottom: 15px solid #FFFFFF;
-						position: absolute;
-						bottom: -4px;
-						left: 5px;
-					}
 				}
 			}
 			&.cart{
