@@ -1,0 +1,58 @@
+extends _layout/default
+
+block vars
+  -title        = 'Top'
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = ''
+block before_page
+  link(rel="preload" as="style" type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' onload="this.onload=null;this.rel='stylesheet'")
+  noscript
+    link( rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+block after_page
+  script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+  script.
+    $(document).ready(function(){
+      $('.m-new__prev').click(function(e){
+        $('.m-new__slick').slick('slickPrev');
+      } );
+      $('.m-new__next').click(function(e){
+        $('.m-new__slick').slick('slickNext');
+      } );
+      $('.m-new__slick').not('.slick-initialized').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: false,
+        arrows: false,
+        lazyLoad: 'progressive',
+        responsive: [
+            {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    });
+block container
+  .m-docs
+    h1.m-ttl THƯ VIỆN KIẾN THỨC KÍNH ÁP TRÒNG - CARAS.E
+  .l-container
+    nav.m-docs_nav
+      a(href="#") Kiến thức cơ bản về contact lens
+      a(href="#") Chuẩn bị trước khi mua lens
+      a(href="#") Kiến thức cho người mới đeo lens
+      a(href="#") Kiến thức cho người đeo lens lâu năm
+      a(href="#") Life & Contact Lens
+    include _modules/slide-new

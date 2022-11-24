@@ -1,0 +1,48 @@
+.m-docs{
+  background-image: url(../../assets/images/banner-docs.jpg);
+  background-repeat: no-repeat;
+  background-color: beige;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  .m-ttl{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    @include sp{
+      top: 30%;
+    }
+  }
+  &_nav{
+    @include flex-center;
+    height: fit-content;
+    margin: auto;
+    background-color: #f5f6f7;
+    border-radius: 25px;
+    width: fit-content;
+    margin: 2rem auto;
+    a{
+      @include flex-center;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 25px;
+      transition: all 1s ease;
+      text-decoration: none;
+      margin: 0 10px;
+      height: 40px;
+      padding: 0 10px;
+      color: black;
+      &:hover, .active{
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
